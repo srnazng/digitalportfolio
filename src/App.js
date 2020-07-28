@@ -7,21 +7,35 @@ import Button from '@material-ui/core/Button';
 import MTPSLogo from './MTPSLogo.png';
 import Submissions from './Submissions.js';
 import { Grid } from '@material-ui/core';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const useStyles = makeStyles({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: '800',
-    padding: '0 30px',
+    paddingTop: "10%",
+    paddingBottom: "40%",
   },
   heading: {
-    paddingTop: "20%",
     textAlign: 'center',
-  }
+  },
+  image: {
+    alignItems: 'center',
+    width: '200px',
+    paddingLeft: "30%",
+  },
+  menu: {
+    alignItems: 'center',
+    paddingLeft: "20%",
+    color: 'white',
+  },
+  button: {
+    color: 'white',
+  },
 });
 
 function App() {
@@ -29,12 +43,19 @@ function App() {
   return (
     <div className={classes.root}>
       <Grid>
-        <Grid item xs="12" >
+        <Grid item xs="12" spacing="1">
           <Typography variant="h1" className={classes.heading}>
             MTPSHacks
         </Typography>
-          <img src={MTPSLogo} alt="Logo" justify="center" />
+          <img src={MTPSLogo} className={classes.image} alt="Logo" justify="center" />
           <Submissions />
+        </Grid>
+        <Grid item xs="12">
+          <ButtonGroup className={classes.menu} variant="text" aria-label="text primary button group">
+            <Button className={classes.button}>About</Button>
+            <Button className={classes.button}>Submissions</Button>
+            <Button className={classes.button}>Sponsors</Button>
+          </ButtonGroup>
         </Grid>
       </Grid>
     </div>
