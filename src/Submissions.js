@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Link as RouterLink } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
@@ -17,8 +17,8 @@ const useStyles = makeStyles({
         background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
         color: 'white',
         height: '800',
-        paddingTop: "10%",
-        paddingBottom: "40%",
+        paddingTop: "100px",
+        paddingBottom: "50%",
     },
     image: {
         alignItems: 'center',
@@ -32,22 +32,30 @@ const useStyles = makeStyles({
     },
     text: {
         alignItems: 'center',
+        textAlign: 'center',
 
-    },
-    menu: {
-        alignItems: 'center',
-        paddingLeft: "25%",
-        color: 'white',
     },
     button: {
         color: 'white',
     },
 });
 
+function createList(item) {
+    return (
+        <li key={item.key}>
+            <SubmissionCard projectName="" memberNames="" description="" inspiration="" challenges="" accomplishments="" learn="" nextSteps="" link1="" link2="" />
+        </li>
+    )
+}
+
+
 function Submissions() {
     const classes = useStyles();
+
+
+
     return (
-        <div className={classes.root}>
+        <div className={classes.root} >
             <Grid >
                 <Grid item xs="12" spacing="1">
                     <IconButton to="/" component={RouterLink} className={classes.image}>
@@ -63,10 +71,14 @@ function Submissions() {
                         Teams of students submitted their project for either the Social Good Challenge or the Marketing Challenge!
                     </Typography>
                 </Grid>
+                <Grid item xs="12">
+                    <SubmissionCard projectName="" memberNames="" description="" inspiration="" challenges="" accomplishments="" learn="" nextSteps="" link1="" link2="" />
+                </Grid>
             </Grid>
 
         </div>
     );
+
 }
 
 export default Submissions;

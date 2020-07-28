@@ -52,7 +52,7 @@ function About() {
             <Grid>
                 <Grid item xs="12" spacing="1">
                     <Typography variant="h1" className={classes.heading}>
-                        About MTPSHacks
+                        About
                     </Typography>
                 </Grid>
                 <Grid item xs="12">
