@@ -4,6 +4,7 @@ import { Typography } from '@material-ui/core';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import MTPSLogo from './MTPSLogo.png';
 
 const useStyles = makeStyles({
   root: {
@@ -27,6 +28,7 @@ function App() {
       <Typography variant="h1" className={classes.heading}>
         MTPSHacks
       </Typography>
+      <img src={MTPSLogo} alt="Logo" />
     </div>
   );
 }
