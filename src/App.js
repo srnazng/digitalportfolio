@@ -5,6 +5,8 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import MTPSLogo from './MTPSLogo.png';
+import Submissions from './Submissions.js';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +19,7 @@ const useStyles = makeStyles({
     padding: '0 30px',
   },
   heading: {
+    paddingTop: "20%",
     textAlign: 'center',
   }
 });
@@ -25,10 +28,15 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography variant="h1" className={classes.heading}>
-        MTPSHacks
-      </Typography>
-      <img src={MTPSLogo} alt="Logo" />
+      <Grid>
+        <Grid item xs="12" >
+          <Typography variant="h1" className={classes.heading}>
+            MTPSHacks
+        </Typography>
+          <img src={MTPSLogo} alt="Logo" justify="center" />
+          <Submissions />
+        </Grid>
+      </Grid>
     </div>
   );
 }
