@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import MTPSLogo from './MTPSLogo.png';
 import { Grid } from '@material-ui/core';
-import Data from './SubmissionList'
+import SubmissionList from './SubmissionList'
 
 const useStyles = makeStyles({
     root: {
@@ -61,7 +61,7 @@ function Submissions() {
                     </Typography>
                 </Grid>
                 <Grid item xs="12">
-                    <Data />
+                    <SubmissionList />
                 </Grid>
             </Grid>
 
