@@ -30,7 +30,7 @@ const useStyles = makeStyles({
   },
   menu: {
     alignItems: 'center',
-    paddingLeft: "20%",
+    paddingLeft: "22%",
     color: 'white',
   },
   button: {
