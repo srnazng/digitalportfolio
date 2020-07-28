@@ -4,10 +4,12 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import SubmissionCard from "./Card.js";
+import Button from '@material-ui/core/Button';
 import MTPSLogo from './MTPSLogo.png';
+import Submissions from './Submissions.js';
 import { Grid } from '@material-ui/core';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles({
     root: {
@@ -20,6 +22,9 @@ const useStyles = makeStyles({
         paddingTop: "10%",
         paddingBottom: "40%",
     },
+    heading: {
+        textAlign: 'center',
+    },
     image: {
         alignItems: 'center',
         width: '100px',
@@ -27,16 +32,9 @@ const useStyles = makeStyles({
         top: '20px',
         left: '20px',
     },
-    heading: {
-        textAlign: 'center',
-    },
-    text: {
-        alignItems: 'center',
-
-    },
     menu: {
         alignItems: 'center',
-        paddingLeft: "25%",
+        paddingLeft: "22%",
         color: 'white',
     },
     button: {
@@ -44,29 +42,27 @@ const useStyles = makeStyles({
     },
 });
 
-function Submissions() {
+function Sponsors() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Grid >
+            <IconButton to="/" component={RouterLink} className={classes.image}>
+                <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
+            </IconButton>
+            <Grid>
                 <Grid item xs="12" spacing="1">
-                    <IconButton to="/" component={RouterLink} className={classes.image}>
-                        <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
-                    </IconButton>
-
                     <Typography variant="h1" className={classes.heading}>
-                        Submissions
+                        Sponsors
                     </Typography>
                 </Grid>
                 <Grid item xs="12">
-                    <Typography variant="body1" justify="center" className={classes.text}>
-                        Teams of students submitted their project for either the Social Good Challenge or the Marketing Challenge!
+                    <Typography variant="body1">
+                        We could do have this hackathon without the support of our sponsors! Thank you!
                     </Typography>
                 </Grid>
             </Grid>
-
         </div>
     );
 }
 
-export default Submissions;
+export default Sponsors;
