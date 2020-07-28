@@ -5,9 +5,9 @@ import { Typography } from '@material-ui/core';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import SubmissionCard from "./Card.js";
 import MTPSLogo from './MTPSLogo.png';
 import { Grid } from '@material-ui/core';
+import SubmissionList from './SubmissionList'
 
 const useStyles = makeStyles({
     root: {
@@ -40,53 +40,34 @@ const useStyles = makeStyles({
     },
 });
 
-function createList(item) {
+function Submissions() {
+    const classes = useStyles();
+
     return (
-        <li key={item.key}>
-            <SubmissionCard projectName="" memberNames="" description="" inspiration="" challenges="" accomplishments="" learn="" nextSteps="" link1="" link2="" />
-        </li>
-    )
-}
+        <div className={classes.root} >
+            <Grid >
+                <Grid item xs="12" spacing="1">
+                    <IconButton to="/" component={RouterLink} className={classes.image}>
+                        <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
+                    </IconButton>
 
-const classes = useStyles();
-
-class Submissions extends Component() {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            items: [],
-        }
-
-        this.createList = this.createList.bind(this);
-    }
-
-    render() {
-        return (
-            <div className={classes.root} >
-                <Grid >
-                    <Grid item xs="12" spacing="1">
-                        <IconButton to="/" component={RouterLink} className={classes.image}>
-                            <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
-                        </IconButton>
-
-                        <Typography variant="h1" className={classes.heading}>
-                            Submissions
+                    <Typography variant="h1" className={classes.heading}>
+                        Submissions
                     </Typography>
-                    </Grid>
-                    <Grid item xs="12">
-                        <Typography variant="body1" justify="center" className={classes.text}>
-                            Teams of students submitted their project for either the Social Good Challenge or the Marketing Challenge!
-                    </Typography>
-                    </Grid>
-                    <Grid item xs="12">
-                        <SubmissionCard projectName="" memberNames="" description="" inspiration="" challenges="" accomplishments="" learn="" nextSteps="" link1="" link2="" />
-                    </Grid>
                 </Grid>
+                <Grid item xs="12">
+                    <Typography variant="body1" justify="center" className={classes.text}>
+                        Teams of students submitted their project for either the Social Good Challenge or the Marketing Challenge!
+                    </Typography>
+                </Grid>
+                <Grid item xs="12">
+                    <SubmissionList />
+                </Grid>
+            </Grid>
 
-            </div>
-        );
-    }
+        </div>
+    );
+
 }
 
 export default Submissions;
