@@ -38,6 +38,9 @@ const useStyles = makeStyles({
     button: {
         color: 'white',
     },
+    card: {
+        width: '800px',
+    }
 });
 
 function Submissions() {
@@ -45,12 +48,11 @@ function Submissions() {
 
     return (
         <div className={classes.root} >
+            <IconButton to="/" component={RouterLink} className={classes.image}>
+                <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
+            </IconButton>
             <Grid >
                 <Grid item xs="12" spacing="1">
-                    <IconButton to="/" component={RouterLink} className={classes.image}>
-                        <img src={MTPSLogo} alt="Logo" justify="center" className={classes.image} />
-                    </IconButton>
-
                     <Typography variant="h1" className={classes.heading}>
                         Submissions
                     </Typography>
@@ -60,7 +62,7 @@ function Submissions() {
                         Teams of students submitted their project for either the Social Good Challenge or the Marketing Challenge!
                     </Typography>
                 </Grid>
-                <Grid item xs="12">
+                <Grid item xs="12" justify="center" className={classes.card} >
                     <SubmissionList />
                 </Grid>
             </Grid>
