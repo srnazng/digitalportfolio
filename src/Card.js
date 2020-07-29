@@ -95,11 +95,11 @@ export default function SubmissionCard(props) {
                     </Typography>
                     <Typography>Links</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <Link href="#" onClick={preventDefault}>
+                        <Link href={props.link1} >
                             {props.link1}
                         </Link>
                         <br />
-                        <Link href="#" onClick={preventDefault}>
+                        <Link href={props.link2}>
                             {props.link2}
                         </Link>
                     </Typography>

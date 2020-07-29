@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     width: "600px",
     paddingLeft: "0%",
+    paddingTop: "30px",
   },
   menu: {
     alignItems: "center",
@@ -48,12 +49,6 @@ function Main() {
           <Typography variant="h1" className={classes.heading}>
             MTPSHacks
           </Typography>
-          <img
-            src={MTPSLogo}
-            className={classes.image}
-            alt="Logo"
-            justify="center"
-          />
         </Grid>
         <Grid item xs="12">
           <ButtonGroup
@@ -83,6 +78,14 @@ function Main() {
               Sponsors
             </Button>
           </ButtonGroup>
+        </Grid>
+        <Grid item xs="12">
+          <img
+            src={MTPSLogo}
+            className={classes.image}
+            alt="Logo"
+            justify="center"
+          />
         </Grid>
       </Grid>
     </div>

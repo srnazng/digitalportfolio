@@ -40,6 +40,9 @@ const useStyles = makeStyles({
     button: {
         color: 'white',
     },
+    text: {
+        width: "500px",
+    }
 });
 
 function About() {
@@ -55,9 +58,15 @@ function About() {
                         About
                     </Typography>
                 </Grid>
-                <Grid item xs="12">
+                <Grid item xs="12" className={classes.text}>
                     <Typography variant="body1">
-                        Marlboro Township
+                        MTPSHacks provides Marlboro's middle school students time and space to collaborate with peers to creatively solve problems using computer programming skills.
+                        <br />
+                        <br />
+                        A hackathon is when teams of students work together toward creating a unique or innovative project using computer programming skills. Hackathons are known to increase coding knowledge and foster collaborative problem-solving skills as students build something useful to make the world a better place.
+                        <br />
+                        <br />
+                        Prior to school closures due to COVID-19, Marlboro Township Public Schools planned for an after-school hackathon for middle school students in collaboration with Junior Achievement of NJ. Rather than cancel because of COVID-19, the program was redesigned to take place virtually so students could engage in a creative, collaborative project with their peers under the guidance of teachers, high school student mentors, and industry professionals. Under Morgan Gross’ leadership, all stakeholders came together to revise the program to foster creativity and innovation at a time when students needed these unique learning experiences the most.
                     </Typography>
                 </Grid>
             </Grid>

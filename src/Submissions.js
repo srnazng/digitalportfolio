@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         color: 'white',
         height: '800',
         paddingTop: "100px",
-        paddingBottom: "50%",
+        paddingBottom: "30px",
     },
     image: {
         alignItems: 'center',
