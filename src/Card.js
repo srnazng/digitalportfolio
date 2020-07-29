@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Link from '@material-ui/core/Link';
+import SummerLauren from './projectMedia/SummerLauren.mp4';
+import ReactPlayer from 'react-player';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
     expandOpen: {
         transform: 'rotate(180deg)',
     },
+    media: {
+        marginTop: "0px",
+        paddingTop: "0px",
+        contentAlign: "center",
+    }
 }));
 
 export default function SubmissionCard(props) {
@@ -43,6 +50,12 @@ export default function SubmissionCard(props) {
         setExpanded(!expanded);
     };
 
+    function showMedia(url) {
+        console.log(url);
+        return (
+            <ReactPlayer url={SummerLauren} playing className={classes.media} width="400px" justify="center" />);
+    }
+
     return (
         <Card className={classes.root}>
             <CardHeader
@@ -50,6 +63,7 @@ export default function SubmissionCard(props) {
                 subheader={props.memberNames}
             />
             <CardContent>
+                {props.projectName == "Summer and Lauren's Social Good Website" ? showMedia("SummerLauren") : ""}
                 <Typography variant="body2" color="textSecondary" component="p">
                     {props.description}
                 </Typography>
