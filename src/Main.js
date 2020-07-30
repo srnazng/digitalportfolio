@@ -9,10 +9,11 @@ import { Grid } from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Backdrop from '@material-ui/core/Backdrop';
 import Particle from "./Particle.js";
+import Footer from "./Footer";
 
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
     height: "100vh",
   },
   body: {
@@ -108,7 +109,7 @@ function Main() {
         </Grid>
 
       </Grid>
-
+      <Footer />
     </div >
 
   );
