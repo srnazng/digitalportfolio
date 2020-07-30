@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "0px",
         paddingTop: "0px",
         contentAlign: "center",
+        justify: "center",
     }
 }));
 
@@ -53,7 +54,9 @@ export default function SubmissionCard(props) {
     function showMedia(url) {
         console.log(url);
         return (
-            <ReactPlayer url={SummerLauren} playing className={classes.media} width="400px" justify="center" />);
+            <div width={1} className={classes.media}>
+                <ReactPlayer url={SummerLauren} playing width="400px" justify="center" />
+            </div>);
     }
 
     return (

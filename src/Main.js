@@ -5,35 +5,53 @@ import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import MTPSLogo from "./MTPSLogo.png";
-import Submissions from "./Submissions.js";
 import { Grid } from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Sponsors from "./Sponsors.js";
+import Backdrop from '@material-ui/core/Backdrop';
+import Particle from "./Particle.js";
 
 const useStyles = makeStyles({
   root: {
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    height: "100vh",
+  },
+  body: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     color: "white",
-    height: "800",
     paddingTop: "10%",
-    paddingBottom: "40%",
+  },
+  particle: {
+    width: "100%",
+    height: "100%",
   },
   heading: {
+    position: "absolute",
     textAlign: "center",
+    left: "50%",
+    top: "200px",
+    justify: "center",
+    transform: 'translate(-50%, -50%)',
   },
   image: {
     alignItems: "center",
     width: "600px",
-    paddingLeft: "0%",
-    paddingTop: "30px",
+    position: "absolute",
+    textAlign: "center",
+    justify: "center",
+    top: "650px",
+    transform: 'translate(-50%, -50%)',
   },
   menu: {
     alignItems: "center",
-    paddingLeft: "25%",
+    position: "absolute",
+    left: "50%",
+    top: "300px",
     color: "white",
+    display: "flex",
+    justify: "center",
+    transform: 'translate(-50%, -50%)',
   },
   button: {
     color: "white",
@@ -44,15 +62,16 @@ function Main() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid>
+      <Particle className={classes.particle} />
+      <Grid className={classes.body}>
         <Grid item xs="12" spacing="1">
           <Typography variant="h1" className={classes.heading}>
             MTPSHacks
           </Typography>
         </Grid>
-        <Grid item xs="12">
+        <Grid item xs="12" className={classes.menu}>
           <ButtonGroup
-            className={classes.menu}
+
             variant="text"
             aria-label="text primary button group"
           >
@@ -87,8 +106,11 @@ function Main() {
             justify="center"
           />
         </Grid>
+
       </Grid>
-    </div>
+
+    </div >
+
   );
 }
 
