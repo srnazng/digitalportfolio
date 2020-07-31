@@ -22,6 +22,18 @@ function SubmissionList() {
       height: "45px",
       borderRadius: "5px",
     },
+    searchbar: {
+      paddingLeft: "10px",
+      paddingBottom: "2px",
+      background: "white",
+      opacity: "70%",
+      fontSize: 22,
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      height: "45px",
+      borderRadius: "5px",
+    },
   }));
 
   const classes = useStyles();
@@ -50,13 +62,14 @@ function SubmissionList() {
         <Grid xs={10}>
           <form noValidate autoComplete="off">
             <TextField
-              className={classes.root}
+              className={classes.searchbar}
               type="text"
               fullWidth
               placeholder="SEARCH FOR A STUDENT'S NAME"
               value={searchTerm}
               onChange={handleChange}
               margin="dense"
+              defaultValue="Naked input"
               inputProps={{ style: { fontSize: 20 } }} // font size of input text
               InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
             />
@@ -64,7 +77,7 @@ function SubmissionList() {
         </Grid>
         {searchResults.map((data) => {
           return (
-            <Grid item xs={3} direction="row" justify="center">
+            <Grid item xs={3}>
               <SubmissionCard
                 key={data.email}
                 projectName={data.teamName}

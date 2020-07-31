@@ -11,7 +11,7 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
+import { red, blue } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Link from "@material-ui/core/Link";
 import SummerLauren from "./projectMedia/SummerLauren.mp4";
@@ -30,50 +30,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    height: "100%",
+    overflow: "hidden",
+    height: "300px"
   },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
-  media: {
-    marginTop: "0px",
-    paddingTop: "0px",
-    contentAlign: "center",
-    justify: "center",
-  },
-  closeButton: {
-    position: "absolute",
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500],
-  },
+  button: {
+    background: "blue", 
+  }
 }));
-
 const DialogTitle = withStyles(useStyles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
     </MuiDialogTitle>
   );
 });
@@ -92,6 +60,7 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs(props) {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -103,15 +72,15 @@ export default function CustomizedDialogs(props) {
 
   return (
     <div>
-      <Paper
+      <Card
         elevation={5}
         margin={10}
         transitionDuration="0.3s"
         display="flex"
-        justifyContent="space-between"
+        justifyContent="center"
         flexDirection="column"
-        height={100}
-        width={100}
+        className={classes.root}
+        style={{ maxHeight: 300, overflow: "auto" }}
       >
         <CardHeader title={props.projectName} subheader={props.memberNames} />
         <CardContent>
@@ -119,7 +88,7 @@ export default function CustomizedDialogs(props) {
             {props.description}
           </Typography>
         </CardContent>
-        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        <Button variant="text" color="primary" onClick={handleClickOpen}>
           Learn More
         </Button>
         <Dialog
@@ -128,32 +97,55 @@ export default function CustomizedDialogs(props) {
           open={open}
         >
           <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-            Modal title
+            {props.projectName}
           </DialogTitle>
           <DialogContent dividers>
-            <Typography gutterBottom>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
+            <Typography>What inspired your project idea?</Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.inspiration}
+              <br />
+              <br />
             </Typography>
-            <Typography gutterBottom>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur
-              et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-              auctor.
+            <Typography>What challenges did your team run into?</Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.challenges}
+              <br />
+              <br />
             </Typography>
-            <Typography gutterBottom>
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-              cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-              dui. Donec ullamcorper nulla non metus auctor fringilla.
+            <Typography>What accompmlishments are you proud of?</Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.accomplishments}
+              <br />
+              <br />
+            </Typography>
+            <Typography>What did you learn?</Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.learn}
+              <br />
+              <br />
+            </Typography>
+            <Typography>
+              What are the next steps for you and your team?
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.nextSteps}
+              <br />
+              <br />
+            </Typography>
+            <Typography>Links</Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <Link href={props.link1}>{props.link1}</Link>
+              <br />
+              <Link href={props.link2}>{props.link2}</Link>
             </Typography>
           </DialogContent>
           <DialogActions>
             <Button autoFocus onClick={handleClose} color="primary">
-              Save changes
+              Exit
             </Button>
           </DialogActions>
         </Dialog>
-      </Paper>
+      </Card>
     </div>
   );
 }

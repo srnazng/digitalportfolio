@@ -5,7 +5,7 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles({
     root: {
         backgroundColor: "white",
-        height: "100px",
+        height: "50px",
     },
     text: {
         fontColor: "black",
