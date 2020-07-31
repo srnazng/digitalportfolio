@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SubmissionCard from "./Card.js";
 import data from "./csvjson.json";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, withTheme } from "@material-ui/core";
+import { Grid, withTheme, Card } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { borders } from "@material-ui/system";
 
@@ -24,16 +24,20 @@ function SubmissionList() {
     },
     searchbar: {
       paddingLeft: "10px",
-      paddingBottom: "2px",
       background: "white",
       opacity: "70%",
       fontSize: 22,
       display: "flex",
       flexDirection: "row",
-      justifyContent: "center",
+      width: "500px",
+      justify: "center",
       height: "45px",
       borderRadius: "5px",
+      position: 'absolute',
+      left: '50%',
+      transform: 'translate(-50% , -50%)',
     },
+
   }));
 
   const classes = useStyles();
@@ -51,16 +55,17 @@ function SubmissionList() {
 
   return (
     <div>
+
       <Grid
         container
-        spacing={5}
+        spacing={4}
         className={classes.grid}
         alignItems="stretch"
         direction="row"
         justify="center"
       >
-        <Grid xs={10}>
-          <form noValidate autoComplete="off">
+        <Grid item xs="12">
+          <form noValidate autoComplete="off" >
             <TextField
               className={classes.searchbar}
               type="text"
@@ -95,7 +100,7 @@ function SubmissionList() {
           );
         })}
       </Grid>
-    </div>
+    </div >
   );
 }
 

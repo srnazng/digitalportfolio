@@ -10,6 +10,12 @@ import { Grid } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
 import SubmissionList from "./SubmissionList";
 
+import SubmissionCard from "./Card.js";
+import data from "./csvjson.json";
+import { withTheme } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
+import { borders } from "@material-ui/system";
+
 const useStyles = makeStyles({
   root: {
     display: "flex",
@@ -17,9 +23,9 @@ const useStyles = makeStyles({
     alignItems: "center",
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     color: "white",
-    height: "800",
+    height: "100%",
     paddingTop: "100px",
-    paddingBottom: "30px",
+    paddingBottom: "60%"
   },
   image: {
     alignItems: "center",
@@ -46,6 +52,17 @@ const useStyles = makeStyles({
 
 function Submissions() {
   const classes = useStyles();
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState([]);
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+  React.useEffect(() => {
+    const results = data.filter((data) =>
+      data.memberNames.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
 
   return (
     <div className={classes.root}>
@@ -68,7 +85,10 @@ function Submissions() {
           Challenge or the Marketing Challenge!
         </Typography>
       </Grid>
-      <SubmissionList />
+
+      <Grid item xs="12">
+        <SubmissionList />
+      </Grid>
     </div>
   );
 }

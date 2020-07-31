@@ -6,6 +6,10 @@ const useStyles = makeStyles({
     root: {
         backgroundColor: "white",
         height: "50px",
+        position: "absolute",
+        bottom: "0px",
+        width: "100%",
+        padding: "10px",
     },
     text: {
         fontColor: "black",

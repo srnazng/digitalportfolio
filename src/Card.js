@@ -22,6 +22,7 @@ import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
 import MuiDialogActions from "@material-ui/core/DialogActions";
 import CloseIcon from "@material-ui/icons/Close";
+import { sizing } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: "300px"
   },
   button: {
-    background: "blue", 
+    background: "blue",
   }
 }));
 const DialogTitle = withStyles(useStyles)((props) => {
@@ -80,14 +81,15 @@ export default function CustomizedDialogs(props) {
         justifyContent="center"
         flexDirection="column"
         className={classes.root}
-        style={{ maxHeight: 300, overflow: "auto" }}
       >
-        <CardHeader title={props.projectName} subheader={props.memberNames} />
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
+        <div style={{ maxHeight: 300, overflow: "auto" }}>
+          <CardHeader title={props.projectName} subheader={props.memberNames} />
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {props.description}
+            </Typography>
+          </CardContent>
+        </div>
         <Button variant="text" color="primary" onClick={handleClickOpen}>
           Learn More
         </Button>
@@ -146,6 +148,6 @@ export default function CustomizedDialogs(props) {
           </DialogActions>
         </Dialog>
       </Card>
-    </div>
+    </div >
   );
 }

@@ -10,7 +10,7 @@ import JANJ from "./janj.png";
 import thinkKindness from "./thinkKindness.png";
 import igniteStem from "./igniteSTEM.png";
 import adp from "./adp.png";
-import verizon from "./verizon.png";
+import verizon from "./verizon.jpeg";
 import jj from "./jj.png";
 import Submissions from "./Submissions.js";
 import { Grid } from "@material-ui/core";
