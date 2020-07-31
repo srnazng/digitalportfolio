@@ -56,6 +56,7 @@ const useStyles = makeStyles({
   },
   button: {
     color: "white",
+    fontSize: "20px"
   },
 });
 
