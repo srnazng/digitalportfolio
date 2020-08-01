@@ -136,7 +136,9 @@ export default function CustomizedDialogs(props) {
             <Button autoFocus
               to="/Submissions"
               component={RouterLink}
-              color="primary">
+              color="primary"
+              onClick={handleClose}
+            >
               Exit
             </Button>
           </DialogActions>
