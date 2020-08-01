@@ -15,6 +15,7 @@ const useStyles = makeStyles({
   root: {
     background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
     height: "100vh",
+    paddingBottom: "100px",
   },
   body: {
     display: "flex",
@@ -36,13 +37,12 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
   },
   image: {
-    alignItems: "center",
     width: "600px",
     position: "absolute",
-    textAlign: "center",
-    justify: "center",
-    top: "650px",
+    top: "750px",
     transform: 'translate(-50%, -50%)',
+    paddingTop: "50px",
+    paddingBottom: "300px",
   },
   menu: {
     alignItems: "center",
@@ -63,56 +63,58 @@ const useStyles = makeStyles({
 function Main() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Particle className={classes.particle} />
-      <Grid className={classes.body}>
-        <Grid item xs="12" spacing="1">
-          <Typography variant="h1" className={classes.heading}>
-            MTPSHacks
+    <div>
+      <div className={classes.root}>
+        <Particle className={classes.particle} />
+        <Grid className={classes.body}>
+          <Grid item xs="12" spacing="1">
+            <Typography variant="h1" className={classes.heading}>
+              MTPSHacks
           </Typography>
-        </Grid>
-        <Grid item xs="12" className={classes.menu}>
-          <ButtonGroup
+          </Grid>
+          <Grid item xs="12" className={classes.menu}>
+            <ButtonGroup
 
-            variant="text"
-            aria-label="text primary button group"
-          >
-            <Button
-              className={classes.button}
-              to="/About"
-              component={RouterLink}
+              variant="text"
+              aria-label="text primary button group"
             >
-              About
+              <Button
+                className={classes.button}
+                to="/About"
+                component={RouterLink}
+              >
+                About
             </Button>
-            <Button
-              className={classes.button}
-              to="/Submissions"
-              component={RouterLink}
-            >
-              Submissions
+              <Button
+                className={classes.button}
+                to="/Submissions"
+                component={RouterLink}
+              >
+                Submissions
             </Button>
-            <Button
-              className={classes.button}
-              to="/Sponsors"
-              component={RouterLink}
-            >
-              Sponsors
+              <Button
+                className={classes.button}
+                to="/Sponsors"
+                component={RouterLink}
+              >
+                Sponsors
             </Button>
-          </ButtonGroup>
-        </Grid>
-        <Grid item xs="12">
-          <img
-            src={MTPSLogo}
-            className={classes.image}
-            alt="Logo"
-            justify="center"
-          />
+            </ButtonGroup>
+          </Grid>
+          <Grid item xs="12">
+            <img
+              src={MTPSLogo}
+              className={classes.image}
+              alt="Logo"
+              justify="center"
+            />
+          </Grid>
+
         </Grid>
 
-      </Grid>
+      </div >
       <Footer />
-    </div >
-
+    </div>
   );
 }
 

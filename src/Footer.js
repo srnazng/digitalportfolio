@@ -5,11 +5,10 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles({
     root: {
         backgroundColor: "white",
-        height: "50px",
+        height: "30px",
         position: "absolute",
-        bottom: "0px",
         width: "100%",
-        padding: "10px",
+        paddingTop: "10px",
     },
     text: {
         fontColor: "black",
