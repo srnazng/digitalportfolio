@@ -35,6 +35,8 @@ function SubmissionList() {
       position: "absolute",
       left: "50%",
       transform: "translate(-50% , -50%)",
+      paddingLeft: "10px",
+      top: "300px",
     },
     searchFormat: {
       paddingTop: "3%",
