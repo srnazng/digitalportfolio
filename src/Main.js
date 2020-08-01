@@ -15,7 +15,6 @@ const useStyles = makeStyles({
   root: {
     background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
     height: "100vh",
-    paddingBottom: "100px",
   },
   body: {
     display: "flex",
@@ -37,12 +36,15 @@ const useStyles = makeStyles({
     transform: 'translate(-50%, -50%)',
   },
   image: {
+    alignItems: "center",
     width: "600px",
     position: "absolute",
-    top: "750px",
+    textAlign: "center",
+    justify: "center",
+    top: "650px",
     transform: 'translate(-50%, -50%)',
     paddingTop: "50px",
-    paddingBottom: "300px",
+    paddingBottom: "30px",
   },
   menu: {
     alignItems: "center",

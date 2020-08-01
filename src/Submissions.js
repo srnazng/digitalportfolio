@@ -40,7 +40,6 @@ const useStyles = makeStyles({
   text: {
     alignItems: "center",
     textAlign: "center",
-    paddingBottom: "2%",
   },
   button: {
     color: "white",
