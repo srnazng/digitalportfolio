@@ -14,7 +14,7 @@ import Footer from "./Footer";
 const useStyles = makeStyles({
   root: {
     background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
-    height: "100vh",
+    height: "100%",
   },
   body: {
     display: "flex",
@@ -37,11 +37,11 @@ const useStyles = makeStyles({
   },
   image: {
     alignItems: "center",
-    width: "600px",
+    width: "30%",
     position: "absolute",
     textAlign: "center",
     justify: "center",
-    top: "650px",
+    top: "60%",
     transform: 'translate(-50%, -50%)',
   },
   menu: {
@@ -63,6 +63,7 @@ const useStyles = makeStyles({
 function Main() {
   const classes = useStyles();
   return (
+    <div>
     <div className={classes.root}>
       <Particle className={classes.particle} />
       <Grid className={classes.body}>
@@ -110,8 +111,9 @@ function Main() {
         </Grid>
 
       </Grid>
-      <Footer />
     </div >
+      <Footer />
+      </div>
 
   );
 }

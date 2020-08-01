@@ -23,21 +23,23 @@ function SubmissionList() {
       borderRadius: "5px",
     },
     searchbar: {
-      paddingLeft: "10px",
+      padding: "0.2%",
       background: "white",
       opacity: "70%",
-      fontSize: 22,
       display: "flex",
       flexDirection: "row",
       width: "500px",
       justify: "center",
       height: "45px",
       borderRadius: "5px",
-      position: 'absolute',
-      left: '50%',
-      transform: 'translate(-50% , -50%)',
+      position: "absolute",
+      left: "50%",
+      transform: "translate(-50% , -50%)",
     },
-
+    searchFormat: {
+      paddingTop: "3%",
+      paddingBottom: "3%",
+    },
   }));
 
   const classes = useStyles();
@@ -55,7 +57,22 @@ function SubmissionList() {
 
   return (
     <div>
-
+      <Grid item xs="12" className={classes.searchFormat}>
+        <form noValidate autoComplete="off">
+          <TextField
+            className={classes.searchbar}
+            type="text"
+            fullWidth
+            placeholder="SEARCH FOR A STUDENT'S NAME"
+            value={searchTerm}
+            onChange={handleChange}
+            margin="dense"
+            defaultValue="Naked input"
+            inputProps={{ style: { fontSize: 20 } }} // font size of input text
+            InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
+          />
+        </form>
+      </Grid>
       <Grid
         container
         spacing={4}
@@ -64,22 +81,6 @@ function SubmissionList() {
         direction="row"
         justify="center"
       >
-        <Grid item xs="12">
-          <form noValidate autoComplete="off" >
-            <TextField
-              className={classes.searchbar}
-              type="text"
-              fullWidth
-              placeholder="SEARCH FOR A STUDENT'S NAME"
-              value={searchTerm}
-              onChange={handleChange}
-              margin="dense"
-              defaultValue="Naked input"
-              inputProps={{ style: { fontSize: 20 } }} // font size of input text
-              InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
-            />
-          </form>
-        </Grid>
         {searchResults.map((data) => {
           return (
             <Grid item xs={3}>
@@ -100,7 +101,7 @@ function SubmissionList() {
           );
         })}
       </Grid>
-    </div >
+    </div>
   );
 }
 
