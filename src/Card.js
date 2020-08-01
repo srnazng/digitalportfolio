@@ -133,7 +133,7 @@ export default function CustomizedDialogs(props) {
             </Typography>
           </DialogContent>
           <DialogActions>
-            <Button autoFocus to="/" component={RouterLink} color="primary">
+            <Button autoFocus to="/Submissions" component={RouterLink} color="primary">
               Exit
             </Button>
           </DialogActions>
