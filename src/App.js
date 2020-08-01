@@ -13,7 +13,7 @@ import {
 
 function App() {
   return (
-    <Router>
+    <Router basename={window.location.pathname || ''}>
       <Switch>
         <Route exact path="/" component={Main} />
         <Route path="/About" component={About} />
