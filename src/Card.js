@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
+import { Link as RouterLink } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -132,7 +133,7 @@ export default function CustomizedDialogs(props) {
             </Typography>
           </DialogContent>
           <DialogActions>
-            <Button autoFocus onClick={handleClose} color="primary">
+            <Button autoFocus to="/" component={RouterLink} color="primary">
               Exit
             </Button>
           </DialogActions>
