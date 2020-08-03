@@ -131,7 +131,7 @@ export default function CustomizedDialogs(props) {
               <br />
               <br />
             </Typography>
-            <Typography>What accompmlishments are you proud of?</Typography>
+            <Typography>What accomplishments are you proud of?</Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {props.accomplishments}
               <br />
