@@ -75,7 +75,7 @@ function Sponsors() {
         </Grid>
         <Grid item xs="12">
           <Typography variant="h6">
-            We could do have this hackathon without the support of our sponsors!
+            We could not have this hackathon without the support of our sponsors!
             Thank you!
           </Typography>
         </Grid>
