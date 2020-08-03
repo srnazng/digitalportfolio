@@ -71,7 +71,7 @@ function Main() {
         <Grid className={classes.body}>
           <Grid item xs="12" spacing="1">
             <Typography variant="h1" className={classes.heading}>
-              MTPSHacks hi 
+              MTPSHacks test2
           </Typography>
           </Grid>
           <Grid item xs="12" className={classes.menu}>
