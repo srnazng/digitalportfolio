@@ -1,104 +1,99 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import logo from "./logo.svg";
+import { Link as RouterLink } from "react-router-dom";
+import { Typography } from "@material-ui/core";
+import "./App.css";
+import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import MuiDialogTitle from "@material-ui/core/DialogTitle";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import MuiDialogActions from "@material-ui/core/DialogActions";
+import MTPSLogo from "./MTPSLogo.png";
+import Submissions from "./Submissions.js";
+import { Grid } from "@material-ui/core";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import Typography from "@material-ui/core/Typography";
 
-const styles = (theme) => ({
+const useStyles = makeStyles({
   root: {
-    margin: 0,
-    padding: theme.spacing(2),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    color: "white",
+    height: "800",
+    paddingTop: "10%",
+    paddingBottom: "40%",
   },
-  closeButton: {
+  heading: {
+    textAlign: "center",
+  },
+  image: {
+    alignItems: "center",
+    width: "100px",
     position: "absolute",
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500],
+    top: "20px",
+    left: "20px",
+  },
+  button: {
+    color: "white",
+  },
+  text: {
+    width: "100%",
   },
 });
 
-const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
+function About() {
+  const classes = useStyles();
   return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
-
-const DialogContent = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiDialogContent);
-
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
-
-export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open dialog
-      </Button>
-      <Dialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
+    <div className={classes.root}>
+      <IconButton to="/" component={RouterLink} className={classes.image}>
+        <img
+          src={MTPSLogo}
+          alt="Logo"
+          justify="center"
+          className={classes.image}
+        />
+      </IconButton>
+      <Grid
+        container
+        spacing={4}
+        className={classes.grid}
+        alignItems="stretch"
+        direction="row"
+        justify="center"
       >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
-        </DialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
+        <Grid item xs={12} spacing="1">
+          <Typography variant="h1" className={classes.heading}>
+            About
           </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
+        </Grid>
+        <Grid item xs={8} className={classes.text}>
+          <Typography variant="h6">
+            MTPSHacks provides Marlboro's middle school students time and space
+            to collaborate with peers to creatively solve problems using
+            computer programming skills.
+            <br />
+            <br />
+            A hackathon is when teams of students work together toward creating
+            a unique or innovative project using computer programming skills.
+            Hackathons are known to increase coding knowledge and foster
+            collaborative problem-solving skills as students build something
+            useful to make the world a better place.
+            <br />
+            <br />
+            Prior to school closures due to COVID-19, Marlboro Township Public
+            Schools planned for an after-school hackathon for middle school
+            students in collaboration with Junior Achievement of NJ. Rather than
+            cancel because of COVID-19, the program was redesigned to take place
+            virtually so students could engage in a creative, collaborative
+            project with their peers under the guidance of teachers, high school
+            student mentors, and industry professionals. Under Morgan Gross’
+            leadership, all stakeholders came together to revise the program to
+            foster creativity and innovation at a time when students needed
+            these unique learning experiences the most.
           </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
-          </Button>
-        </DialogActions>
-      </Dialog>
+        </Grid>
+      </Grid>
     </div>
   );
 }
+
+export default About;

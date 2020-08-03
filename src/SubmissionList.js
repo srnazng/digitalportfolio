@@ -53,7 +53,7 @@ function SubmissionList() {
   };
   React.useEffect(() => {
     const results = data.filter((data) =>
-      data.memberNames.toLowerCase().includes(searchTerm)
+      data.memberNames.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
   }, [searchTerm]);
