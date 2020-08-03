@@ -63,7 +63,7 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs(props) {
+export default function CustomizedDialogs() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -157,3 +157,5 @@ export default function CustomizedDialogs(props) {
     </div >
   );
 }
+
+
