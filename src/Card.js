@@ -32,7 +32,21 @@ const useStyles = makeStyles((theme) => ({
     background: "blue",
   }
 }));
-const DialogTitle = withStyles(useStyles)((props) => {
+
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: "absolute",
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+});
+
+const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
     <MuiDialogTitle disableTypography className={classes.root} {...other}>
@@ -63,7 +77,7 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function CustomizedDialogs() {
+export default function CustomizedDialogs(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
