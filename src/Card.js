@@ -70,7 +70,7 @@ export default function CustomizedDialogs(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const handleClose = (event) => {
+  const handleClose = () => {
     setOpen(false);
   };
 
