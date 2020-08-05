@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
+import { Link as RouterLink } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
@@ -13,6 +14,7 @@ import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
 import MuiDialogActions from "@material-ui/core/DialogActions";
+import { sizing } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,7 +59,7 @@ export default function CustomizedDialogs(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const handleClose = () => {
+  const handleClose = (event) => {
     setOpen(false);
   };
 
@@ -132,7 +134,10 @@ export default function CustomizedDialogs(props) {
             </Typography>
           </DialogContent>
           <DialogActions>
-            <Button autoFocus onClick={handleClose} color="primary">
+            <Button autoFocus
+              color="primary"
+              onClick={handleClose}
+            >
               Exit
             </Button>
           </DialogActions>

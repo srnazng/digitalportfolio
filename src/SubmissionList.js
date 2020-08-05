@@ -32,11 +32,12 @@ function SubmissionList() {
       justify: "center",
       height: "45px",
       borderRadius: "5px",
-      position: "absolute",
+      //position: "absolute",
       left: "50%",
       transform: "translate(-50% , -50%)",
       paddingLeft: "10px",
-      top: "300px",
+      marginTop: "30px",
+      // top: "300px",
     },
     searchFormat: {
       paddingTop: "3%",
@@ -59,22 +60,6 @@ function SubmissionList() {
 
   return (
     <div>
-      <Grid item xs="12" className={classes.searchFormat}>
-        <form noValidate autoComplete="off">
-          <TextField
-            className={classes.searchbar}
-            type="text"
-            fullWidth
-            placeholder="SEARCH FOR A STUDENT'S NAME"
-            value={searchTerm}
-            onChange={handleChange}
-            margin="dense"
-            defaultValue="Naked input"
-            inputProps={{ style: { fontSize: 20 } }} // font size of input text
-            InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
-          />
-        </form>
-      </Grid>
       <Grid
         container
         spacing={4}
@@ -83,6 +68,23 @@ function SubmissionList() {
         direction="row"
         justify="center"
       >
+        <Grid item xs="12" className={classes.searchFormat}>
+          <form noValidate autoComplete="off">
+            <TextField
+              className={classes.searchbar}
+              type="text"
+              fullWidth
+              placeholder="SEARCH FOR A STUDENT'S NAME"
+              value={searchTerm}
+              onChange={handleChange}
+              margin="dense"
+              defaultValue="Naked input"
+              inputProps={{ style: { fontSize: 20 } }} // font size of input text
+              InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
+            />
+          </form>
+        </Grid>
+
         {searchResults.map((data) => {
           return (
             <Grid item xs={3}>
