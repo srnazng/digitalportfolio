@@ -1,60 +1,71 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid, Card, CardMedia, createMuiTheme } from "@material-ui/core";
 import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import MTPSLogo from "./MTPSLogo.png";
-import { Grid } from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Backdrop from '@material-ui/core/Backdrop';
 import Particle from "./Particle.js";
 import Footer from "./Footer";
 
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+})
+
 const useStyles = makeStyles({
   root: {
     background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
     height: "100vh",
+    margin: 0,
   },
   body: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
     color: "white",
     paddingTop: "10%",
+    zIndex: 1,
+    position: "absolute",
+    top: "0px",
   },
   particle: {
     width: "100%",
     height: "100%",
+    position: "absolute",
+    top: "0px",
+    bottom: "0px",
+    left: "0px",
+    right: "0px",
+    zIndex: 0,
   },
   heading: {
-    position: "absolute",
     textAlign: "center",
-    left: "50%",
-    top: "200px",
     justify: "center",
-    transform: 'translate(-50%, -50%)',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: "40px",
+    },
   },
   image: {
-    alignItems: "center",
-    width: "600px",
-    position: "absolute",
-    textAlign: "center",
+    width: "20%",
+    align: "center",
     justify: "center",
-    top: "650px",
-    transform: 'translate(-50%, -50%)',
     paddingTop: "50px",
-    paddingBottom: "30px",
+    paddingBottom: "100px",
+    zIndex: 1,
+
   },
   menu: {
-    alignItems: "center",
-    position: "absolute",
-    left: "50%",
-    top: "300px",
+    textAlign: "center",
     color: "white",
-    display: "flex",
     justify: "center",
-    transform: 'translate(-50%, -50%)',
+    zIndex: 1,
   },
   button: {
     color: "white",
@@ -65,58 +76,64 @@ const useStyles = makeStyles({
 function Main() {
   const classes = useStyles();
   return (
-    <div>
-      <div className={classes.root}>
-        <Particle className={classes.particle} />
-        <Grid className={classes.body}>
-          <Grid item xs="12" spacing="1">
-            <Typography variant="h1" className={classes.heading}>
-              MTPSHacks
+    <div className={classes.root}>
+      <Particle className={classes.particle} />
+      <Grid container
+        className={classes.body}
+        spacing={1}
+        direction="column"
+        alignItems="stretch"
+        display="flex"
+        style={{ minHeight: '100vh' }}
+      >
+        <Grid item xs="12">
+          <Typography variant="h1" className={classes.heading}>
+            MTPSHacks
           </Typography>
-          </Grid>
-          <Grid item xs="12" className={classes.menu}>
-            <ButtonGroup
-
-              variant="text"
-              aria-label="text primary button group"
-            >
-              <Button
-                className={classes.button}
-                to="/About"
-                component={RouterLink}
-              >
-                About
-            </Button>
-              <Button
-                className={classes.button}
-                to="/Submissions"
-                component={RouterLink}
-              >
-                Submissions
-            </Button>
-              <Button
-                className={classes.button}
-                to="/Sponsors"
-                component={RouterLink}
-              >
-                Sponsors
-            </Button>
-            </ButtonGroup>
-          </Grid>
-          <Grid item xs="12">
-            <img
-              src={MTPSLogo}
-              className={classes.image}
-              alt="Logo"
-              justify="center"
-            />
-          </Grid>
-
         </Grid>
 
-      </div >
-      <Footer />
-    </div>
+        <Grid item xs="12" className={classes.menu}>
+          <ButtonGroup
+            variant="text"
+            aria-label="text primary button group"
+          >
+            <Button
+              className={classes.button}
+              to="/About"
+              component={RouterLink}
+            >
+              About
+            </Button>
+            <Button
+              className={classes.button}
+              to="/Submissions"
+              component={RouterLink}
+            >
+              Submissions
+            </Button>
+            <Button
+              className={classes.button}
+              to="/Sponsors"
+              component={RouterLink}
+            >
+              Sponsors
+            </Button>
+          </ButtonGroup>
+        </Grid>
+
+        <Grid item xs="12"
+          align="center"
+        >
+          <CardMedia
+            className={classes.image}
+            component="img"
+            image={MTPSLogo}
+            title="Logo"
+          />
+        </Grid>
+
+      </Grid>
+    </div >
   );
 }
 

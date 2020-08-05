@@ -2,7 +2,6 @@
   "name": "mtpshacksweb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mtpshackathon.github.io/home",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -19,8 +18,6 @@
     "react-tsparticles": "^1.17.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
