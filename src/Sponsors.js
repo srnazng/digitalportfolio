@@ -13,9 +13,21 @@ import adp from "./adp.png";
 import verizon from "./verizon.png";
 import jj from "./jj.png";
 import Submissions from "./Submissions.js";
-import { Grid } from "@material-ui/core";
+import { Grid, createMuiTheme} from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import IconButton from "@material-ui/core/IconButton";
+
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+});
 
 const useStyles = makeStyles({
   root: {
@@ -26,12 +38,15 @@ const useStyles = makeStyles({
     height: "100%",
     paddingTop: "10%",
     paddingBottom: "12%",
-    paddingLeft: "30px",
     background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
     height: "100vh",
+    textAlign: "center",
   },
   heading: {
     textAlign: "center",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "40px",
+    },
   },
   image: {
     alignItems: "center",
@@ -75,35 +90,34 @@ function Sponsors() {
         </Grid>
         <Grid item xs="12">
           <Typography variant="h6">
-            We could not have this hackathon without the support of our sponsors!
-            Thank you!
+            We could not have this hackathon without the support of our
+            sponsors! Thank you!
           </Typography>
         </Grid>
       </Grid>
       <Grid
         container
         className={classes.grid}
-        alignItems="center"
+        alignItems="stretch"
         direction="row"
         justify="center"
-        wrap="wrap"
       >
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={JANJ} className={classes.logo} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={igniteStem} className={classes.logo} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={thinkKindness} className={classes.logo} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={adp} className={classes.logo} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={verizon} className={classes.logo} />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
           <img src={jj} className={classes.logo} />
         </Grid>
       </Grid>
