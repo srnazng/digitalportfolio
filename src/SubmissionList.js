@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SubmissionCard from "./Card.js";
 import data from "./csvjson.json";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, withTheme, Card } from "@material-ui/core";
+import { Grid, withTheme, createMuiTheme } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { borders } from "@material-ui/system";
 
@@ -28,7 +28,7 @@ function SubmissionList() {
       opacity: "70%",
       display: "flex",
       flexDirection: "row",
-      width: "500px",
+      width: "50%",
       justify: "center",
       height: "45px",
       borderRadius: "5px",
@@ -44,6 +44,7 @@ function SubmissionList() {
       paddingBottom: "3%",
     },
   }));
+
 
   const classes = useStyles();
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -87,7 +88,7 @@ function SubmissionList() {
 
         {searchResults.map((data) => {
           return (
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
               <SubmissionCard
                 key={data.email}
                 projectName={data.teamName}

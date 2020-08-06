@@ -48,12 +48,12 @@ const useStyles = makeStyles({
   heading: {
     textAlign: "center",
     justify: "center",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: "40px",
     },
   },
   image: {
-    width: "20%",
+    width: "30%",
     align: "center",
     justify: "center",
     paddingTop: "50px",

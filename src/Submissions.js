@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import MTPSLogo from "./MTPSLogo.png";
 import { Grid } from "@material-ui/core";
-import { Paper } from "@material-ui/core";
+import { Paper, createMuiTheme } from "@material-ui/core";
 import SubmissionList from "./SubmissionList";
 
 import SubmissionCard from "./Card.js";
@@ -15,6 +15,18 @@ import data from "./csvjson.json";
 import { withTheme } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { borders } from "@material-ui/system";
+
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+});
 
 const useStyles = makeStyles({
   root: {
@@ -25,7 +37,7 @@ const useStyles = makeStyles({
     color: "white",
     height: "100%",
     paddingTop: "100px",
-    paddingBottom: "60%"
+    paddingBottom: "60%",
   },
   image: {
     alignItems: "center",
@@ -36,6 +48,9 @@ const useStyles = makeStyles({
   },
   heading: {
     textAlign: "center",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "40px",
+    },
   },
   text: {
     alignItems: "center",
@@ -51,6 +66,7 @@ const useStyles = makeStyles({
 
 function Submissions() {
   const classes = useStyles();
+
   const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
   const handleChange = (event) => {
