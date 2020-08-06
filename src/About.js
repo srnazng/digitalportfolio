@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Link as RouterLink } from 'react-router-dom';
-import { Typography } from '@material-ui/core';
-import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import MTPSLogo from './MTPSLogo.png';
-import Submissions from './Submissions.js';
-import { Grid } from '@material-ui/core';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import IconButton from '@material-ui/core/IconButton';
+import React from "react";
+import logo from "./logo.svg";
+import { Link as RouterLink } from "react-router-dom";
+import { Typography } from "@material-ui/core";
+import "./App.css";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import MTPSLogo from "./MTPSLogo.png";
+import Submissions from "./Submissions.js";
+import { Grid } from "@material-ui/core";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    color: 'white',
-    height: '800',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    color: "white",
+    height: "800",
     paddingTop: "10%",
     paddingBottom: "40%",
   },
