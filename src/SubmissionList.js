@@ -29,6 +29,7 @@ function SubmissionList() {
       display: "flex",
       flexDirection: "row",
       width: "75%",
+      minWidth: "75vw",
       justify: "center",
       height: "45px",
       borderRadius: "5px",
