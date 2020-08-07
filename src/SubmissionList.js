@@ -32,7 +32,6 @@ function SubmissionList() {
       justify: "center",
       height: "45px",
       borderRadius: "5px",
-      //position: "absolute",
       left: "50%",
       transform: "translate(-50% , -50%)",
       paddingLeft: "10px",
@@ -80,8 +79,6 @@ function SubmissionList() {
               onChange={handleChange}
               margin="dense"
               defaultValue="Naked input"
-              inputProps={{ style: { fontSize: 20 } }} // font size of input text
-              InputLabelProps={{ style: { fontSize: 20 } }} // font size of input label
             />
           </form>
         </Grid>
