@@ -119,44 +119,77 @@ export default function CustomizedDialogs(props) {
             {props.projectName}
           </DialogTitle>
           <DialogContent dividers>
-            <Typography>What inspired your project idea?</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.inspiration}
-              <br />
-              <br />
-            </Typography>
-            <Typography>What challenges did your team run into?</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.challenges}
-              <br />
-              <br />
-            </Typography>
-            <Typography>What accomplishments are you proud of?</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.accomplishments}
-              <br />
-              <br />
-            </Typography>
-            <Typography>What did you learn?</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.learn}
-              <br />
-              <br />
-            </Typography>
-            <Typography>
-              What are the next steps for you and your team?
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {props.nextSteps}
-              <br />
-              <br />
-            </Typography>
-            <Typography>Links</Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              <Link href={props.link1}>{props.link1}</Link>
-              <br />
-              <Link href={props.link2}>{props.link2}</Link>
-            </Typography>
+            {props.inspiration != "" ?
+              <div>
+                <Typography>What inspired your project idea?</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.inspiration}
+                  <br />
+                  <br />
+                </Typography>
+              </div> : ""}
+
+            {props.challenges != "" ?
+              <div>
+                <Typography>What challenges did your team run into?</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.challenges}
+                  <br />
+                  <br />
+                </Typography></div> : ""}
+
+            {props.accomplishments != "" ?
+              <div>
+                <Typography>What accomplishments are you proud of?</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.accomplishments}
+                  <br />
+                  <br />
+                </Typography>
+              </div> : ""
+            }
+
+            {props.learn != "" ?
+              <div>
+                <Typography>What did you learn?</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.learn}
+                  <br />
+                  <br />
+                </Typography>
+              </div> : ""
+            }
+
+            {props.nextSteps != "" ?
+              <div>
+                <Typography>
+                  What are the next steps for you and your team?
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {props.nextSteps}
+                  <br />
+                  <br />
+                </Typography>
+              </div> : ""
+            }
+
+            {props.link1 != "" ?
+              <div>
+                <Typography>Links</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  <Link href={props.link1}>{props.link1}</Link>
+                </Typography>
+              </div>
+              : ""}
+
+            {props.link2 != "" ?
+              <div>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  <Link href={props.link2}>{props.link2}</Link>
+                </Typography>
+              </div>
+              : ""}
+
           </DialogContent>
           <DialogActions>
             <Button autoFocus
