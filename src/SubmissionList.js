@@ -28,7 +28,7 @@ function SubmissionList() {
       opacity: "70%",
       display: "flex",
       flexDirection: "row",
-      width: "50%",
+      width: "75%",
       justify: "center",
       height: "45px",
       borderRadius: "5px",
@@ -60,7 +60,7 @@ function SubmissionList() {
   }, [searchTerm]);
 
   return (
-    <div>
+    <div width="100%">
       <Grid
         container
         spacing={4}
