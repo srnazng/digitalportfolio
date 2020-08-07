@@ -13,7 +13,7 @@ import adp from "./adp.png";
 import verizon from "./verizon.png";
 import jj from "./jj.png";
 import Submissions from "./Submissions.js";
-import { Grid, createMuiTheme} from "@material-ui/core";
+import { Grid, createMuiTheme } from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import IconButton from "@material-ui/core/IconButton";
 
@@ -89,8 +89,8 @@ function Sponsors() {
           </Typography>
         </Grid>
         <Grid item xs="12">
-          <Typography variant="h6">
-            We could not have this hackathon without the support of our
+          <Typography variant="h6" padding="10px">
+            We could not have had this hackathon without the support of our
             sponsors! Thank you!
           </Typography>
         </Grid>

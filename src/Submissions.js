@@ -95,7 +95,7 @@ function Submissions() {
         </Typography>
       </Grid>
       <Grid item xs="12">
-        <Typography variant="h6" justify="center" className={classes.text}>
+        <Typography variant="h6" justify="center" className={classes.text} padding="10px">
           Teams of students submitted their project for either the Social Good
           Challenge or the Marketing Challenge!
         </Typography>
