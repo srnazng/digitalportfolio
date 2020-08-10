@@ -18,6 +18,7 @@ import MuiDialogContent from '@material-ui/core/DialogContent';
 import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import ReactPlayer from 'react-player';
 
 const theme = createMuiTheme({
     breakpoints: {
@@ -53,35 +54,6 @@ const useStyles = makeStyles({
     title: {
         color: "white",
     },
-    heading: {
-        fontSize: theme.typography.pxToRem(18),
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-    subheading: {
-        textAlign: "left",
-        color: "#75c9d3",
-    },
-    paragraph: {
-        textAlign: "left",
-    },
-    paper: {
-        paddingLeft: "20px",
-        paddingTop: "5px",
-        borderRadius: "0px",
-        backgroundColor: "#75c9d3",
-        boxShadow: "none",
-        minHeight: "300px"
-    },
-    list: {
-        marginLeft: "40px",
-    },
-    button: {
-        '&:hover': {
-            background: "none",
-        },
-        border: 1,
-        borderColor: 'black',
-    },
     card: {
         paddingRight: "20px",
         paddingLeft: "20px",
@@ -94,7 +66,7 @@ const useStyles = makeStyles({
     image: {
         width: "80%",
         marginBottom: "30px",
-    }
+    },
 });
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -177,11 +149,11 @@ function Experience() {
                         </Card>
                     </Grid>
 
-                    <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0}>
+                    <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0} >
                         <DialogTitle id="customized-dialog-title" onClose={handleClose0}>
                             Mentorq
                         </DialogTitle>
-                        <DialogContent dividers>
+                        <DialogContent dividers >
                             <Typography gutterBottom>
                                 Mentorq is a web based system to connect hackers to mentors at Rutgers University's virtual hackathon in Fall 2020.
                                 As a frontend developer on the Mentorq team, I have worked with API integration, administration view, user feedback system, website design, and more.
@@ -230,7 +202,9 @@ function Experience() {
                             MyBus
                         </DialogTitle>
                         <DialogContent dividers>
+                            <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
                             <Typography gutterBottom>
+                                <br />
                                 MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
                                 My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
                                 The site was styled using Bootstrap and hosted using Firebase hosting. All authorization and user information was stored through a Firestore database.
