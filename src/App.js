@@ -1,8 +1,7 @@
 import React from 'react';
 import Main from './Main.js';
-import About from './About.js';
-import Submissions from './Submissions.js';
-import Sponsors from './Sponsors.js'
+import "./App.css";
+
 import {
   Route,
   BrowserRouter as Router,
@@ -16,9 +15,6 @@ function App() {
     <Router basename={window.location.pathname || ''}>
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route path="/About" component={About} />
-        <Route path="/Submissions" component={Submissions} />
-        <Route path="/Sponsors" component={Sponsors} />
       </Switch>
     </Router>
   );

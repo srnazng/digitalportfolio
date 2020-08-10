@@ -1,14 +1,12 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
-import { Typography, Grid, Card, CardMedia, createMuiTheme } from "@material-ui/core";
-import "./App.css";
+
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import MTPSLogo from "./MTPSLogo.png";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Backdrop from '@material-ui/core/Backdrop';
-import Particle from "./Particle.js";
-import Footer from "./Footer";
+import Particle from "./components/Particle.js";
+import prof from "./media/prof.png";
+import Intro from "./components/Intro.js";
+import Experience from "./components/Experience.js";
+import Projects from "./components/Projects.js";
+import { Grid, createMuiTheme } from "@material-ui/core";
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -24,53 +22,29 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(45deg, #FE6B8B 40%, #FF8E53 90%)",
-    height: "100vh",
-    margin: 0,
+    background: "#070033",
+    height: "800px",
   },
   body: {
     color: "white",
-    paddingTop: "10%",
-    zIndex: 1,
     position: "absolute",
     top: "0px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
-  particle: {
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    top: "0px",
-    bottom: "0px",
-    left: "0px",
-    right: "0px",
-    zIndex: 0,
-  },
-  heading: {
-    textAlign: "center",
-    justify: "center",
+  experience: {
+    backgroundColor: "#75c9d3",
+    height: "400px",
     [theme.breakpoints.down('xs')]: {
-      fontSize: "40px",
+      paddingBottom: "100px",
     },
   },
-  image: {
-    width: "30%",
-    align: "center",
-    justify: "center",
-    paddingTop: "50px",
+  projects: {
+    backgroundColor: "#2c5f72",
+    height: "800px",
     paddingBottom: "100px",
-    zIndex: 1,
-
-  },
-  menu: {
-    textAlign: "center",
-    color: "white",
-    justify: "center",
-    zIndex: 1,
-  },
-  button: {
-    color: "white",
-    fontSize: "20px"
-  },
+  }
 });
 
 function Main() {
@@ -78,60 +52,16 @@ function Main() {
   return (
     <div className={classes.root}>
       <Particle className={classes.particle} />
-      <Grid container
-        className={classes.body}
-        spacing={1}
-        direction="column"
-        alignItems="stretch"
-        display="flex"
-        style={{ minHeight: '100vh' }}
-      >
-        <Grid item xs="12">
-          <Typography variant="h1" className={classes.heading}>
-            MTPSHacks
-          </Typography>
+      <Grid container className={classes.body} spacing={0}>
+        <Grid item xs={12}>
+          <Intro />
         </Grid>
-
-        <Grid item xs="12" className={classes.menu}>
-          <ButtonGroup
-            variant="text"
-            aria-label="text primary button group"
-          >
-            <Button
-              className={classes.button}
-              to="/About"
-              component={RouterLink}
-            >
-              About
-            </Button>
-            <Button
-              className={classes.button}
-              to="/Submissions"
-              component={RouterLink}
-            >
-              Submissions
-            </Button>
-            <Button
-              className={classes.button}
-              to="/Sponsors"
-              component={RouterLink}
-            >
-              Sponsors
-            </Button>
-          </ButtonGroup>
+        <Grid item xs={12} className={classes.experience}>
+          <Experience />
         </Grid>
-
-        <Grid item xs="12"
-          align="center"
-        >
-          <CardMedia
-            className={classes.image}
-            component="img"
-            image={MTPSLogo}
-            title="Logo"
-          />
+        <Grid item xs={12} className={classes.projects}>
+          <Projects />
         </Grid>
-
       </Grid>
     </div >
   );
