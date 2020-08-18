@@ -47,7 +47,7 @@ const styles = (theme) => ({
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "#2c5f72",
+        backgroundColor: "#070033",
         width: "100vw",
         boxShadow: "none",
     },
@@ -60,7 +60,7 @@ const useStyles = makeStyles({
         paddingTop: "20px",
         width: "80%",
         height: "100%",
-        backgroundColor: "rgba(212, 244, 228, 0.85)",
+        backgroundColor: "rgba(212, 196, 255, 0.9)",
         borderRadius: "0px",
     },
     image: {

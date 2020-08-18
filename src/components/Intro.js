@@ -1,8 +1,9 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Typography, Grid, Card, CardMedia, createMuiTheme } from "@material-ui/core";
+import { Typography, Grid, Card, CardMedia, createMuiTheme, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import prof from "../media/prof.png";
+import Resume from "../media/SerenaZeng_Resume.pdf";
 
 const theme = createMuiTheme({
     breakpoints: {
@@ -53,6 +54,15 @@ const useStyles = makeStyles({
         [theme.breakpoints.down('xs')]: {
             fontSize: "16px",
         },
+    },
+    button: {
+        borderRadius: "0px",
+        fontSize: "20px",
+        border: "none",
+        backgroundColor: 'rgba(212, 196, 255, 0.9)',
+        '&:hover': {
+            backgroundColor: "rgba(211, 107, 255, 0.8)",
+        },
     }
 }
 );
@@ -94,6 +104,9 @@ function Intro() {
                     <Typography variant="h6" className={classes.paragraph} >
                         I am a student at Rutgers University majoring in Computer Science. Some of my interests include web development, machine learning, and entrepreneurship.
                     </Typography>
+                </Grid>
+                <Grid item xs="7">
+                    <Button variant="contained" className={classes.button} href={Resume}>Resume</Button>
                 </Grid>
             </Grid>
 

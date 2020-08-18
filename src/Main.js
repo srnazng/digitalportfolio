@@ -7,6 +7,8 @@ import Intro from "./components/Intro.js";
 import Experience from "./components/Experience.js";
 import Projects from "./components/Projects.js";
 import { Grid, createMuiTheme } from "@material-ui/core";
+import Socials from "./components/Socials.js";
+import Skills from "./components/Skills.js"
 
 const theme = createMuiTheme({
   breakpoints: {
@@ -34,16 +36,24 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   experience: {
-    backgroundColor: "#75c9d3",
+    backgroundColor: "rgb(40, 80, 99)",
     height: "400px",
     [theme.breakpoints.down('xs')]: {
       paddingBottom: "100px",
     },
   },
   projects: {
-    backgroundColor: "#2c5f72",
+    backgroundColor: "#070033",
     height: "800px",
     paddingBottom: "100px",
+  },
+  skills: {
+    backgroundColor: "rgb(40, 80, 99)",
+    height: "400px",
+    width: "100vw",
+    paddingTop: "20px",
+    justify: "center",
+    align: "center",
   }
 });
 
@@ -62,7 +72,11 @@ function Main() {
         <Grid item xs={12} className={classes.projects}>
           <Projects />
         </Grid>
+        <Grid item xs={12} className={classes.skills}>
+          <Skills />
+        </Grid>
       </Grid>
+      <Socials />
     </div >
   );
 }

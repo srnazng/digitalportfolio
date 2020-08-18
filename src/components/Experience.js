@@ -21,13 +21,12 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "#75c9d3",
+        backgroundColor: "#406584",
         width: "100vw",
         boxShadow: "none",
     },
     heading: {
-        fontSize: theme.typography.pxToRem(18),
-        fontWeight: theme.typography.fontWeightRegular,
+        color: "white"
     },
     subheading: {
         textAlign: "left",
@@ -40,9 +39,10 @@ const useStyles = makeStyles({
         paddingLeft: "20px",
         paddingTop: "5px",
         borderRadius: "0px",
-        backgroundColor: "#75c9d3",
+        backgroundColor: "rgba(117, 201, 211, 0)",
         boxShadow: "none",
-        minHeight: "300px"
+        minHeight: "300px",
+        color: "white"
     },
     list: {
         marginLeft: "40px",
@@ -63,42 +63,42 @@ function Experience() {
     return (
         <Paper className={classes.root}>
             <Grid container
-                spacing={1}
+                spacing={3}
                 align="center"
+                justify="center"
                 style={{ minHeight: '300px' }}
             >
                 <Grid item xs={12}>
-                    <Typography variant="h2">
+                    <Typography variant="h2" className={classes.heading}>
                         <br />Experience<br />
                     </Typography>
                 </Grid>
-                <Grid item xs={0} sm={0} md={2} lg={2} xl={2}>
-                </Grid>
-                <Grid item xs={6} sm={6} md={3} lg={3} xl={3}>
+
+                <Grid item xs={6} sm={6} md={3} lg={3} xl={2}>
                     <List component="nav" aria-label="main mailbox folders" className={classes.list} >
-                        <ListItem button onClick={() => setSlide(0)} style={{ backgroundColor: slide === 0 ? 'rgba(212, 244, 228, 0.5)' : 'rgba(52, 92, 108, 0.08)' }}>
+                        <ListItem button onClick={() => setSlide(0)} style={{ backgroundColor: slide === 0 ? 'rgba(212, 196, 255, 0.9)' : 'rgba(255, 255, 255, 0.9)' }}>
                             <ListItemText primary="Junior Achievement of NJ Internship" align="right" />
                         </ListItem>
-                        <ListItem button onClick={() => setSlide(1)} style={{ backgroundColor: slide === 1 ? 'rgba(212, 244, 228, 0.5)' : 'rgba(52, 92, 108, 0.08)' }}>
+                        <ListItem button onClick={() => setSlide(1)} style={{ backgroundColor: slide === 1 ? 'rgba(212, 196, 255, 0.9)' : 'rgba(255, 255, 255, 0.9)' }}>
                             <ListItemText primary="Computer Science Teacher Assistant" align="right" />
                         </ListItem>
-                        <ListItem button onClick={() => setSlide(2)} style={{ backgroundColor: slide === 2 ? 'rgba(212, 244, 228, 0.5)' : 'rgba(52, 92, 108, 0.08)' }}>
+                        <ListItem button onClick={() => setSlide(2)} style={{ backgroundColor: slide === 2 ? 'rgba(212, 196, 255, 0.9)' : 'rgba(255, 255, 255, 0.9)' }}>
                             <ListItemText primary="Built By Me LLC Instructor" align="right" />
                         </ListItem>
                     </List>
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={5} sm={5} md={4} lg={4} xl={4}>
                     <Paper className={classes.paper} align="left">
                         {slide === 0 ?
                             <div>
-                                <Typography variant="h5">
-                                    Junior Achievement of NJ Intern
-                            </Typography>
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>Junior Achievement of NJ Internship</b>
+                                </Typography>
                                 <Typography variant="p2" >
                                     <i>July 2020 - Present</i> <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    - Developed a React based website platform to display project submissions for Marlboro Township public school district's middle school <br />
+                                    - Web Development <br />
                                 - Marketing <br />
                                 - Program Organization
                             </Typography>
@@ -106,22 +106,23 @@ function Experience() {
                             : ""}
                         {slide === 1 ?
                             <div>
-                                <Typography variant="h5" >
-                                    Computer Science Teacher Assistant
-                            </Typography>
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>Computer Science Teacher Assistant</b>
+                                </Typography>
                                 <Typography variant="p2" >
                                     <i>March 2020 - June 2020 </i> <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
                                     AP Computer Science A and Introduction to Computer Science with Python teacher assistant at Middlesex County Academy for Science, Mathematics and Engineering Technologies
-                            </Typography>
+                                <br /><br />
+                                </Typography>
                             </div>
                             : ""}
                         {slide === 2 ?
                             <div>
-                                <Typography variant="h5" >
-                                    Built By Me LLC Instructor
-                            </Typography>
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>Built By Me LLC Instructor</b>
+                                </Typography>
                                 <Typography variant="p2" >
                                     <i>July 2020 - Present </i> <br /> <br />
                                 </Typography>

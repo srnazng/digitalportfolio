@@ -66,7 +66,7 @@ class Particle extends Component {
                 enable: true,
                 value_area: 1000,
               },
-              value: 80,
+              value: 40,
             },
             opacity: {
               value: 0.5,
