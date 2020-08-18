@@ -26,6 +26,7 @@ const useStyles = makeStyles({
   root: {
     background: "#070033",
     height: "800px",
+    width: "100vw"
   },
   body: {
     color: "white",
@@ -36,7 +37,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   experience: {
-    backgroundColor: "rgb(40, 80, 99)",
+    backgroundColor: "#406584",
     height: "400px",
     [theme.breakpoints.down('xs')]: {
       paddingBottom: "100px",
@@ -48,7 +49,7 @@ const useStyles = makeStyles({
     paddingBottom: "100px",
   },
   skills: {
-    backgroundColor: "rgb(40, 80, 99)",
+    backgroundColor: "#406584",
     height: "400px",
     width: "100vw",
     paddingTop: "20px",
