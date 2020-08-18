@@ -63,7 +63,7 @@ function Experience() {
     return (
         <Paper className={classes.root}>
             <Grid container
-                spacing={3}
+                spacing={1}
                 align="center"
                 justify="center"
                 style={{ minHeight: '300px' }}

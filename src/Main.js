@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   root: {
     background: "#070033",
     height: "800px",
-    width: "100vw"
+    width: "100%"
   },
   body: {
     color: "white",
