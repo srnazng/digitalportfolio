@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, Card, Paper, Grid, CardMedia, Link } from "@material-ui/core";
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Divider from '@material-ui/core/Divider';
-import hackru from '../media/hackru.jpg';
+import mtpshacks_demo from '../media/mtpshacks_demo.png';
+import mentorq_demo from '../media/mentorq_demo.png';
 import white_hackru from '../media/white_hackru.png';
 import mybus from '../media/mybus.png';
 import mtpshacks from '../media/mtpshacks.png';
@@ -66,6 +63,9 @@ const useStyles = makeStyles({
     image: {
         width: "80%",
         marginBottom: "30px",
+    },
+    dialogTitle: {
+        backgroundColor: "rgb(212, 196, 255)",
     },
 });
 
@@ -144,20 +144,21 @@ function Experience() {
                         <Card className={classes.card} onClick={handleClickOpen0}>
                             <CardMedia component="img" image={white_hackru} className={classes.image} />
                             <Typography variant="h5">
-                                Mentorq
+                                MentorQ
                         </Typography>
                         </Card>
                     </Grid>
 
-                    <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0} >
-                        <DialogTitle id="customized-dialog-title" onClose={handleClose0}>
-                            Mentorq
+                    <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0}>
+                        <DialogTitle onClose={handleClose0} className={classes.dialogTitle}>
+                            MentorQ
                         </DialogTitle>
-                        <DialogContent dividers >
-                            <Typography gutterBottom>
-                                Mentorq is a web based system to connect hackers to mentors at Rutgers University's virtual hackathon in Fall 2020.
-                                As a frontend developer on the Mentorq team, I have worked with API integration, administration view, user feedback system, website design, and more.
-                                The Mentorq frontend was built using a React framework and styled with Material-UI.
+                        <DialogContent dividers align="center">
+                            <CardMedia component="img" image={mentorq_demo} className={classes.image} />
+                            <Typography gutterBottom align="left">
+                                MentorQ is a web based system to connect hackers to mentors at Rutgers University's virtual hackathon in Fall 2020.
+                                As a frontend developer on the MentorqQ team, I have worked with API integration, the administration view, user feedback system, website design, and more.
+                                The MentorQ frontend was built using a React framework and styled with Material-UI.
                             </Typography>
                         </DialogContent>
                     </Dialog>
@@ -172,11 +173,12 @@ function Experience() {
                     </Grid>
 
                     <Dialog onClose={handleClose1} aria-labelledby="customized-dialog-title" open={open1}>
-                        <DialogTitle id="customized-dialog-title" onClose={handleClose1}>
+                        <DialogTitle onClose={handleClose1} className={classes.dialogTitle}>
                             MTPSHacks Submission Site
                         </DialogTitle>
-                        <DialogContent dividers>
-                            <Typography gutterBottom>
+                        <DialogContent dividers align="center">
+                            <CardMedia component="img" image={mtpshacks_demo} className={classes.image} />
+                            <Typography gutterBottom align="left">
                                 The MTPSHacks website platform displayed project submissions for Marlboro Township public school district's middle school hackathon.
                                 The 50+ student submissions originally through a Google form could be viewed by students, parents, as well as sponsors of the hackathon.
                                 The website was created using a React framework, styled using Material-UI, and hosted using Heroku.
@@ -198,12 +200,12 @@ function Experience() {
                     </Grid>
 
                     <Dialog onClose={handleClose2} aria-labelledby="customized-dialog-title" open={open2}>
-                        <DialogTitle id="customized-dialog-title" onClose={handleClose2}>
+                        <DialogTitle onClose={handleClose2} className={classes.dialogTitle}>
                             MyBus
                         </DialogTitle>
-                        <DialogContent dividers>
+                        <DialogContent dividers align="center">
                             <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
-                            <Typography gutterBottom>
+                            <Typography gutterBottom align="left">
                                 <br />
                                 MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
                                 My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
