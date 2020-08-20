@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   experience: {
-    backgroundColor: "#406584",
+    backgroundColor: "#white",
     height: "400px",
     [theme.breakpoints.down('xs')]: {
       paddingBottom: "100px",

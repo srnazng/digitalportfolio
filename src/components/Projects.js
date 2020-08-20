@@ -245,28 +245,16 @@ function Experience() {
                     </Grid>
 
                     <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Card className={classes.card} onClick={handleClickOpen3}>
-                            <CardMedia component="img" image={prof} className={classes.image} />
-                            <Typography variant="h5">
-                                Portfolio Website
+                        <Link href="https://github.com/srnazng/digitalportfolio">
+                            <Card className={classes.card} >
+                                <CardMedia component="img" image={prof} className={classes.image} />
+                                <Typography variant="h5">
+                                    Portfolio Website
                                 <br />
-                            </Typography>
-                        </Card>
+                                </Typography>
+                            </Card>
+                        </Link>
                     </Grid>
-
-                    <Dialog onClose={handleClose3} aria-labelledby="customized-dialog-title" open={open3}>
-                        <DialogTitle onClose={handleClose3} className={classes.dialogTitle}>
-                            Portfolio Website
-                        </DialogTitle>
-                        <DialogContent dividers align="center">
-                            <Typography gutterBottom align="left">
-                                React website created from scratch, styled with Material-UI and hosted on Heroku
-                            </Typography>
-                            <Link href="https://github.com/srnazng/digitalportfolio">
-                                View Github Page
-                            </Link>
-                        </DialogContent>
-                    </Dialog>
                 </Grid>
             </Grid>
         </Paper >
