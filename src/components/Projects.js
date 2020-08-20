@@ -150,6 +150,9 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text} >
                                     MentorQ
                             </Typography>
+                                <Typography variant="p2" className={classes.text}>
+                                    Click to learn more
+                                </Typography>
                                 <CardMedia component="img" image={white_hackru} className={classes.image} />
                                 <Chip label="React" color="primary" /> <Chip label="Redux" /> <Chip label="Material UI" color="secondary" />
 
@@ -176,6 +179,9 @@ function Experience() {
                             <Card className={classes.card} onClick={handleClickOpen1}>
                                 <Typography variant="h5" className={classes.text}>
                                     MTPSHacks Website
+                                </Typography>
+                                <Typography variant="p2" className={classes.text}>
+                                    Click to learn more
                                 </Typography>
                                 <CardMedia component="img" image={mtpshacks} className={classes.image} />
                                 <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
@@ -207,6 +213,9 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text}>
                                     MyBus
                                 </Typography>
+                                <Typography variant="p2" className={classes.text}>
+                                    Click to learn more
+                                </Typography>
                                 <CardMedia component="img" image={mybus} className={classes.image} />
                                 <Chip label="HTML" color="primary" /> <Chip label="CSS" color="secondary" /> <Chip label="JavaScript" /> <Chip label="Firebase" /> <Chip label="Bootstrap" color="secondary" />
                             </Card>
@@ -215,7 +224,7 @@ function Experience() {
                         <Dialog onClose={handleClose2} aria-labelledby="customized-dialog-title" open={open2}>
                             <DialogTitle onClose={handleClose2} className={classes.dialogTitle}>
                                 MyBus
-                        </DialogTitle>
+                            </DialogTitle>
                             <DialogContent dividers align="center">
                                 <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
                                 <Typography gutterBottom align="left">
@@ -259,8 +268,11 @@ function Experience() {
                             <Link href="https://github.com/srnazng/digitalportfolio" style={{ textDecoration: 'none' }}>
                                 <Card className={classes.card} spacing={1}>
                                     <Typography variant="h5" className={classes.text}>
-                                        Portfolio Website
-                                </Typography>
+                                        Digital Portfolio
+                                    </Typography>
+                                    <Typography variant="p2" className={classes.text}>
+                                        Click to learn more
+                                    </Typography>
                                     <CardMedia component="img" image={prof} className={classes.image} />
                                     <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
                                 </Card>
