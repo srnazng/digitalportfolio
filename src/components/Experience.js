@@ -76,7 +76,7 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Rutgers University</b>
+                                    <b>Rutgers University Honors Program</b>
                                 </Typography>
                                 <Typography variant="p2" >
                                     <i>Class of 2024</i> <br /> <br />
