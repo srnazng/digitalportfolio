@@ -99,6 +99,7 @@ function Experience() {
     const [open0, setOpen0] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
 
     const handleClickOpen0 = () => {
         setOpen0(true);
@@ -122,6 +123,13 @@ function Experience() {
 
     const handleClose2 = () => {
         setOpen2(false);
+    };
+    const handleClickOpen3 = () => {
+        setOpen3(true);
+    };
+
+    const handleClose3 = () => {
+        setOpen3(false);
     };
 
     return (
@@ -237,7 +245,7 @@ function Experience() {
                     </Grid>
 
                     <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Card className={classes.card} onClick={handleClickOpen2}>
+                        <Card className={classes.card} onClick={handleClickOpen3}>
                             <CardMedia component="img" image={prof} className={classes.image} />
                             <Typography variant="h5">
                                 Portfolio Website
@@ -246,23 +254,16 @@ function Experience() {
                         </Card>
                     </Grid>
 
-                    <Dialog onClose={handleClose2} aria-labelledby="customized-dialog-title" open={open2}>
-                        <DialogTitle onClose={handleClose2} className={classes.dialogTitle}>
+                    <Dialog onClose={handleClose3} aria-labelledby="customized-dialog-title" open={open3}>
+                        <DialogTitle onClose={handleClose3} className={classes.dialogTitle}>
                             Portfolio Website
                         </DialogTitle>
                         <DialogContent dividers align="center">
-                            <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
                             <Typography gutterBottom align="left">
-                                <br />
-                                MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
-                                My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
-                                The site was styled using Bootstrap and hosted using Firebase hosting. All authorization and user information was stored through a Firestore database.
-                                <br /><br />
-                                MyBus won the 2019 Congressional App Challenge. Our submission video can be seen <Link href="https://youtu.be/Vz4HAo7gtr4">here</Link>.
-                                <br /><br />
+                                React website created from scratch, styled with Material-UI and hosted on Heroku
                             </Typography>
-                            <Link href="https://pallone.house.gov/media/press-releases/pallone-announces-winner-2019-congressional-app-challenge#:~:text=Pallone%20Announces%20Winner%20of%202019%20Congressional%20App%20Challenge,-January%206%2C%202020&text=Serena%20Zeng%20and%20Adhya%20Khare,school%20officials%2C%20and%20bus%20drivers." >
-                                View Congressman Frank Pallone's article on MyBus!
+                            <Link href="https://github.com/srnazng/digitalportfolio">
+                                View Github Page
                             </Link>
                         </DialogContent>
                     </Dialog>
