@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
-import { createMuiTheme, Card, Paper, Grid, CardMedia, Link } from "@material-ui/core";
+import { createMuiTheme, Card, Paper, Grid, CardMedia, Link, Chip, ThemeProvider } from "@material-ui/core";
 import mtpshacks_demo from '../media/mtpshacks_demo.png';
 import mentorq_demo from '../media/mentorq_demo.png';
 import white_hackru from '../media/white_hackru.png';
@@ -17,23 +17,12 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import ReactPlayer from 'react-player';
-
-const theme = createMuiTheme({
-    breakpoints: {
-        values: {
-            xs: 0,
-            sm: 600,
-            md: 960,
-            lg: 1280,
-            xl: 1920,
-        },
-    },
-})
+import theme from '../theme.js';
 
 const styles = (theme) => ({
     root: {
         margin: 0,
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
     },
     closeButton: {
         position: 'absolute',
@@ -45,32 +34,45 @@ const styles = (theme) => ({
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "#070033",
-        width: "100vw",
+        backgroundColor: "#f2f2f2",
         boxShadow: "none",
     },
     title: {
-        color: "white",
+        color: "#070033",
     },
     card: {
         paddingTop: "20px",
-        width: "99%",
+        width: "98%",
         height: "99%",
         backgroundColor: "rgba(212, 196, 255, 0.9)",
         borderRadius: "0px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        display: "flext",
+        direction: "column",
         '&:hover': {
-            boxShadow: "10px",
+            boxShadow: 3,
             width: "100%",
             height: "100%",
         }
     },
     image: {
-        width: "40%",
+        width: "50%",
         marginBottom: "30px",
     },
     dialogTitle: {
         backgroundColor: "rgb(212, 196, 255)",
     },
+    dialogimage: {
+        width: "80%",
+    },
+    text: {
+        display: "flex",
+        flex: "1 0 auto",
+        alignItems: "flex-end",
+        justifyContent: "center",
+        margin: "10px",
+    }
 });
 
 const DialogTitle = withStyles(styles)((props) => {
@@ -99,7 +101,6 @@ function Experience() {
     const [open0, setOpen0] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
-    const [open3, setOpen3] = useState(false);
 
     const handleClickOpen0 = () => {
         setOpen0(true);
@@ -124,139 +125,150 @@ function Experience() {
     const handleClose2 = () => {
         setOpen2(false);
     };
-    const handleClickOpen3 = () => {
-        setOpen3(true);
-    };
-
-    const handleClose3 = () => {
-        setOpen3(false);
-    };
 
     return (
         <Paper className={classes.root}>
-            <Grid container
-                spacing={2}
-                align="center"
-                style={{ minHeight: '400px' }}
-                alignItems="center"
-
-            >
-                <Grid item xs={12}>
-                    <Typography variant="h2" className={classes.title}>
-                        <br />Projects <br /> <br />
-                    </Typography>
-                </Grid>
+            <ThemeProvider theme={theme}>
                 <Grid container
-                    spacing={4}
-                    alignItems="stretch"
-                    direction="row"
-                    justify="center"
+                    spacing={2}
+                    align="center"
+                    style={{ minHeight: '400px' }}
+                    alignItems="center"
                 >
-                    <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Card className={classes.card} onClick={handleClickOpen0}>
-                            <CardMedia component="img" image={white_hackru} className={classes.image} />
-                            <Typography variant="h5">
-                                MentorQ
-                                <br />
-                            </Typography>
-                        </Card>
+                    <Grid item xs={12}>
+                        <Typography variant="h2" className={classes.title}>
+                            <br />Projects <br /> <br />
+                        </Typography>
                     </Grid>
+                    <Grid container
+                        spacing={4}
+                        direction="row"
+                        justify="center"
+                    >
+                        <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
+                            <Card className={classes.card} onClick={handleClickOpen0}>
+                                <Typography variant="h5" className={classes.text} >
+                                    MentorQ
+                            </Typography>
+                                <CardMedia component="img" image={white_hackru} className={classes.image} />
+                                <Chip label="React" color="primary" /> <Chip label="Redux" /> <Chip label="Material UI" color="secondary" />
 
-                    <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0}>
-                        <DialogTitle onClose={handleClose0} className={classes.dialogTitle}>
-                            MentorQ
+                            </Card>
+                        </Grid>
+
+                        <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0}>
+                            <DialogTitle onClose={handleClose0} className={classes.dialogTitle}>
+                                MentorQ
                         </DialogTitle>
-                        <DialogContent dividers align="center">
-                            <CardMedia component="img" image={mentorq_demo} className={classes.image} />
-                            <Typography gutterBottom align="left">
+                            <DialogContent dividers align="center">
+                                <CardMedia component="img" image={mentorq_demo} className={classes.dialogimage} />
+                                <Typography gutterBottom align="left">
+                                    <br />
                                 MentorQ is a web based system to connect hackers to mentors at Rutgers University's virtual hackathon in Fall 2020.
                                 As a frontend developer on the MentorqQ team, I have worked with API integration, the administration view, user feedback system, website design, and more.
                                 The MentorQ frontend was built using a React framework and styled with Material-UI.
                             </Typography>
-                        </DialogContent>
-                    </Dialog>
+                            </DialogContent>
+                        </Dialog>
 
-                    <Grid item xs={12} sm={12} md={1} lg={1} xl={1}>
-                    </Grid>
 
-                    <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Card className={classes.card} onClick={handleClickOpen1}>
-                            <CardMedia component="img" image={mtpshacks} className={classes.image} />
-                            <Typography variant="h5">
+                        <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
+                            <Card className={classes.card} onClick={handleClickOpen1}>
+                                <Typography variant="h5" className={classes.text}>
+                                    MTPSHacks Website
+                                </Typography>
+                                <CardMedia component="img" image={mtpshacks} className={classes.image} />
+                                <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
+                            </Card>
+                        </Grid>
+
+                        <Dialog onClose={handleClose1} aria-labelledby="customized-dialog-title" open={open1}>
+                            <DialogTitle onClose={handleClose1} className={classes.dialogTitle}>
                                 MTPSHacks Submission Site
-                                <br />
-                            </Typography>
-                        </Card>
-                    </Grid>
-
-                    <Dialog onClose={handleClose1} aria-labelledby="customized-dialog-title" open={open1}>
-                        <DialogTitle onClose={handleClose1} className={classes.dialogTitle}>
-                            MTPSHacks Submission Site
                         </DialogTitle>
-                        <DialogContent dividers align="center">
-                            <CardMedia component="img" image={mtpshacks_demo} className={classes.image} />
-                            <Typography gutterBottom align="left">
+                            <DialogContent dividers align="center">
+                                <CardMedia component="img" image={mtpshacks_demo} className={classes.dialogimage} />
+                                <Typography gutterBottom align="left">
+                                    <br />
                                 The MTPSHacks website platform displayed project submissions for Marlboro Township public school district's middle school hackathon.
                                 The 50+ student submissions originally through a Google form could be viewed by students, parents, as well as sponsors of the hackathon.
                                 The website was created using a React framework, styled using Material-UI, and hosted using Heroku.
                             </Typography>
-                            <Link href="https://mtpshacks.herokuapp.com/" >
-                                View live site here
+                                <Link href="https://mtpshacks.herokuapp.com/" >
+                                    View live site here
                             </Link>
-                        </DialogContent>
-                    </Dialog>
+                            </DialogContent>
+                        </Dialog>
 
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    </Grid>
 
-                    <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Card className={classes.card} onClick={handleClickOpen2}>
-                            <CardMedia component="img" image={mybus} className={classes.image} />
-                            <Typography variant="h5">
-                                <br />
+
+                        <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
+                            <Card className={classes.card} onClick={handleClickOpen2}>
+                                <Typography variant="h5" className={classes.text}>
+                                    MyBus
+                                </Typography>
+                                <CardMedia component="img" image={mybus} className={classes.image} />
+                                <Chip label="HTML" color="primary" /> <Chip label="CSS" color="secondary" /> <Chip label="JavaScript" /> <Chip label="Firebase" /> <Chip label="Bootstrap" color="secondary" />
+                            </Card>
+                        </Grid>
+
+                        <Dialog onClose={handleClose2} aria-labelledby="customized-dialog-title" open={open2}>
+                            <DialogTitle onClose={handleClose2} className={classes.dialogTitle}>
                                 MyBus
-                                <br />
-                            </Typography>
-                        </Card>
-                    </Grid>
-
-                    <Dialog onClose={handleClose2} aria-labelledby="customized-dialog-title" open={open2}>
-                        <DialogTitle onClose={handleClose2} className={classes.dialogTitle}>
-                            MyBus
                         </DialogTitle>
-                        <DialogContent dividers align="center">
-                            <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
-                            <Typography gutterBottom align="left">
-                                <br />
+                            <DialogContent dividers align="center">
+                                <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
+                                <Typography gutterBottom align="left">
+                                    <br />
                                 MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
                                 My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
                                 The site was styled using Bootstrap and hosted using Firebase hosting. All authorization and user information was stored through a Firestore database.
                                 <br /><br />
-                                MyBus won the 2019 Congressional App Challenge. Our submission video can be seen <Link href="https://youtu.be/Vz4HAo7gtr4">here</Link>.
+                                MyBus won the 2019 Congressional App Challenge. Our submission video can be seen <Link href="https://youtu.be/Vz4HAo7gtr4"> <u>here</u></Link>.
                                 <br /><br />
-                            </Typography>
-                            <Link href="https://pallone.house.gov/media/press-releases/pallone-announces-winner-2019-congressional-app-challenge#:~:text=Pallone%20Announces%20Winner%20of%202019%20Congressional%20App%20Challenge,-January%206%2C%202020&text=Serena%20Zeng%20and%20Adhya%20Khare,school%20officials%2C%20and%20bus%20drivers." >
-                                View Congressman Frank Pallone's article on MyBus!
-                            </Link>
-                        </DialogContent>
-                    </Dialog>
-
-                    <Grid item xs={12} sm={12} md={1} lg={1} xl={1}>
-                    </Grid>
-
-                    <Grid item xs={10} sm={7} md={3} lg={3} xl={2}>
-                        <Link href="https://github.com/srnazng/digitalportfolio">
-                            <Card className={classes.card} >
-                                <CardMedia component="img" image={prof} className={classes.image} />
-                                <Typography variant="h5">
-                                    Portfolio Website
-                                <br />
                                 </Typography>
-                            </Card>
-                        </Link>
+
+                                <Typography variant="h6">
+                                    Articles on MyBus
+                                </Typography>
+                                <div align="left">
+                                    <ul>
+                                        <li>
+                                            <Link href="https://pallone.house.gov/media/press-releases/pallone-announces-winner-2019-congressional-app-challenge#:~:text=Pallone%20Announces%20Winner%20of%202019%20Congressional%20App%20Challenge,-January%206%2C%202020&text=Serena%20Zeng%20and%20Adhya%20Khare,school%20officials%2C%20and%20bus%20drivers." >
+                                                <u>NJ Congressman Frank Pallone's Press Release</u>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="https://www.mycentraljersey.com/story/news/education/in-our-schools/2020/01/10/nj-students-pallone-announces-winners-congressional-app-challenge/2797282001/">
+                                                <u>MyCentralJersey</u>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="https://www.tapinto.net/articles/piscataway-student-wins-congressional-app-challenge-for-mybus">
+                                                <u>TapInto</u>
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DialogContent>
+                        </Dialog>
+
+
+
+                        <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
+                            <Link href="https://github.com/srnazng/digitalportfolio" style={{ textDecoration: 'none' }}>
+                                <Card className={classes.card} spacing={1}>
+                                    <Typography variant="h5" className={classes.text}>
+                                        Portfolio Website
+                                </Typography>
+                                    <CardMedia component="img" image={prof} className={classes.image} />
+                                    <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
+                                </Card>
+                            </Link>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
+            </ThemeProvider>
         </Paper >
     );
 }

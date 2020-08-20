@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactWordcloud from 'react-wordcloud';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
 
 const words = [
     {
@@ -73,7 +75,7 @@ const callbacks = {
 }
 
 const options = {
-    colors: ["white", "#75c9d3", "#51e3f0", "rgb(212, 196, 255)", "rgb(211, 107, 255)", "skyblue", "#af6acc", "black", "lightblue", "navy"],
+    colors: ["#75c9d3", "#51e3f0", "rgb(212, 196, 255)", "rgb(211, 107, 255)", "skyblue", "#af6acc", "black", "lightblue", "navy"],
     fontSizes: [40, 90],
     fontStyle: "normal",
     fontWeight: "normal",
@@ -84,11 +86,25 @@ const options = {
     transitionDuration: 1000
 };
 
+const useStyles = makeStyles({
+    heading: {
+        textAlign: "center",
+        color: "#070033",
+        padding: "20px",
+    },
+});
+
 function Skills() {
-    return <ReactWordcloud
-        callbacks={callbacks}
-        options={options}
-        words={words} />
+    const classes = useStyles();
+    return <div>
+        <Typography variant="h2" className={classes.heading}>
+            Skills and Tools
+        </Typography>
+        <ReactWordcloud
+            callbacks={callbacks}
+            options={options}
+            words={words} />
+    </div>
 }
 
 export default Skills;

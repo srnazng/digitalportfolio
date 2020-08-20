@@ -57,8 +57,9 @@ function Experience() {
             <Grid container
                 spacing={1}
                 style={{ minHeight: '300px' }}
+                margin="10px"
             >
-                <Grid xs={12} sm={10} md={6} lg={4} xl={4} >
+                <Grid xs={12} sm={12} md={6} lg={4} xl={4}>
                     <Typography variant="h2" className={classes.heading} >
                         <br />Education<br />
                     </Typography>
@@ -110,7 +111,7 @@ function Experience() {
                         </TimelineItem>
                     </Timeline>
                 </Grid>
-                <Grid item xs={12} sm={10} md={6} lg={4} xl={4} >
+                <Grid item xs={12} sm={12} md={6} lg={4} xl={4} >
                     <Typography variant="h2" className={classes.heading}>
                         <br />Experience<br />
                     </Typography>
@@ -163,7 +164,7 @@ function Experience() {
                         </TimelineItem>
                     </Timeline>
                 </Grid>
-                <Grid item xs={12} sm={10} md={6} lg={4} xl={4}>
+                <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
                     <Typography variant="h2" className={classes.heading}>
                         <br />Certification<br />
                     </Typography>
