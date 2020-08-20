@@ -21,7 +21,7 @@ const words = [
         value: 80,
     },
     {
-        text: 'APIs',
+        text: 'Rest API',
         value: 90,
     },
     {
