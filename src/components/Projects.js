@@ -137,7 +137,10 @@ function Experience() {
                 >
                     <Grid item xs={12}>
                         <Typography variant="h2" className={classes.title}>
-                            <br />Projects <br /> <br />
+                            <br />Projects
+                        </Typography>
+                        <Typography variant="p2" className={classes.text}>
+                            Click project to learn more<br /> <br />
                         </Typography>
                     </Grid>
                     <Grid container
@@ -150,9 +153,7 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text} >
                                     MentorQ
                             </Typography>
-                                <Typography variant="p2" className={classes.text}>
-                                    Click to learn more
-                                </Typography>
+
                                 <CardMedia component="img" image={white_hackru} className={classes.image} />
                                 <Chip label="React" color="primary" /> <Chip label="Redux" /> <Chip label="Material UI" color="secondary" />
 
@@ -180,9 +181,7 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text}>
                                     MTPSHacks Website
                                 </Typography>
-                                <Typography variant="p2" className={classes.text}>
-                                    Click to learn more
-                                </Typography>
+
                                 <CardMedia component="img" image={mtpshacks} className={classes.image} />
                                 <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
                             </Card>
@@ -213,9 +212,7 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text}>
                                     MyBus
                                 </Typography>
-                                <Typography variant="p2" className={classes.text}>
-                                    Click to learn more
-                                </Typography>
+
                                 <CardMedia component="img" image={mybus} className={classes.image} />
                                 <Chip label="HTML" color="primary" /> <Chip label="CSS" color="secondary" /> <Chip label="JavaScript" /> <Chip label="Firebase" /> <Chip label="Bootstrap" color="secondary" />
                             </Card>
@@ -270,9 +267,7 @@ function Experience() {
                                     <Typography variant="h5" className={classes.text}>
                                         Digital Portfolio
                                     </Typography>
-                                    <Typography variant="p2" className={classes.text}>
-                                        Click to learn more
-                                    </Typography>
+
                                     <CardMedia component="img" image={prof} className={classes.image} />
                                     <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
                                 </Card>
