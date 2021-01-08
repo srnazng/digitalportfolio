@@ -102,7 +102,7 @@ function Intro() {
                         <b>Welcome to my portfolio!</b>
                     </Typography>
                     <Typography variant="h6" className={classes.paragraph} >
-                        I am a student at Rutgers University majoring in Computer Science. Some of my interests include web development, machine learning, and entrepreneurship.
+                        I am a student at Rutgers University majoring in Computer Science. Some of my interests include web development, machine learning, and STEM education.
                     </Typography>
                 </Grid>
                 <Grid item xs="7">

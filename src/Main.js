@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     },
   },
   projects: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "white",
     height: "800px",
     paddingBottom: "100px",
   },
@@ -68,11 +68,11 @@ function Main() {
         <Grid item xs={12}>
           <Intro />
         </Grid>
-        <Grid item xs={12} className={classes.skills}>
-          <Skills />
-        </Grid>
         <Grid item xs={12} className={classes.experience}>
           <Experience />
+        </Grid>
+        <Grid item xs={12} className={classes.skills}>
+          <Skills />
         </Grid>
         <Grid item xs={12} className={classes.projects}>
           <Projects />

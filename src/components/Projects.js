@@ -34,7 +34,7 @@ const styles = (theme) => ({
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: "#f2f2f2",
+        backgroundColor: "white",
         boxShadow: "none",
     },
     title: {
@@ -52,8 +52,7 @@ const useStyles = makeStyles({
         direction: "column",
         '&:hover': {
             boxShadow: 3,
-            width: "100%",
-            height: "100%",
+            backgroundColor: "rgba(195, 180, 224, 0.9)",
         }
     },
     image: {
@@ -155,7 +154,7 @@ function Experience() {
                             </Typography>
 
                                 <CardMedia component="img" image={white_hackru} className={classes.image} />
-                                <Chip label="React" color="primary" /> <Chip label="Redux" /> <Chip label="Material UI" color="secondary" />
+                                <Chip label="ReactJS" color="primary" /> <Chip label="REST APIs" /><Chip label="Material-UI" color="secondary" /><Chip label="Redux" color="primary" /> <Chip label="Django" />
 
                             </Card>
                         </Grid>
@@ -183,7 +182,7 @@ function Experience() {
                                 </Typography>
 
                                 <CardMedia component="img" image={mtpshacks} className={classes.image} />
-                                <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
+                                <Chip label="ReactJS" color="primary" /> <Chip label="Material-UI" color="secondary" />
                             </Card>
                         </Grid>
 
@@ -269,7 +268,7 @@ function Experience() {
                                     </Typography>
 
                                     <CardMedia component="img" image={prof} className={classes.image} />
-                                    <Chip label="React" color="primary" /> <Chip label="Material UI" color="secondary" />
+                                    <Chip label="ReactJS" color="primary" /> <Chip label="Material-UI" color="secondary" />
                                 </Card>
                             </Link>
                         </Grid>

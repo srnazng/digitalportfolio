@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const words = [
     {
-        text: 'React',
-        value: 95,
+        text: 'ReactJS',
+        value: 93,
     },
     {
         text: 'Java',
@@ -17,11 +17,11 @@ const words = [
         value: 85,
     },
     {
-        text: 'HTML',
+        text: 'Django',
         value: 80,
     },
     {
-        text: 'Rest API',
+        text: 'REST APIs',
         value: 90,
     },
     {
@@ -37,7 +37,7 @@ const words = [
         value: 85,
     },
     {
-        text: 'Material UI',
+        text: 'Material-UI',
         value: 85,
     },
     {
@@ -57,7 +57,7 @@ const words = [
         value: 70,
     },
     {
-        text: 'Microsoft Office',
+        text: 'HTML',
         value: 70,
     },
     {

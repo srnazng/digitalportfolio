@@ -79,11 +79,15 @@ function Experience() {
                                     <b>Rutgers University Honors Program</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>Class of 2024</i> <br /> <br />
+                                    <i>
+                                        Class of 2024 <br />
+                                        4.0 GPA <br />
+                                        Computer Science Major, Business Administration Minor <br /><br />
+                                    </i>
                                 </Typography>
                                 <Typography variant="p1">
-                                    Computer Science major
-                            </Typography>
+                                    Past/Current Coursework: Data Structures, Computer Architecture, Intro to Discrete Structures
+                                </Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem >
@@ -101,11 +105,13 @@ function Experience() {
                                     <b>Middlesex County College High School Scholar</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>2019-2020 </i> <br /> <br />
+                                    <i>
+                                        2019-2020 <br />
+                                        4.0 GPA
+                                    </i>  <br /><br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    - Discrete Mathematics <br />
-                                    - Linear Algebra
+                                    Coursework: Discrete Mathematics, Linear Algebra
                             </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -128,15 +134,43 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Junior Achievement of NJ Internship</b>
+                                    <b>Web Development and Programs Intern</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>July 2020 - Present</i> <br /> <br />
+                                    <i>
+                                        Junior Achievement of New Jersey<br />
+                                        July 2020 - Present
+                                    </i> <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    - Web Development <br />
-                                - Marketing <br />
-                                - Program Organization
+                                    - Develop and maintain websites for various programs <br />
+                                    - Organize statewide STEM programs for students <br />
+                                    - Marketing <br />
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem align="left">
+                            <TimelineOppositeContent
+                                className={classes.oppositeContent}
+                                color="textSecondary"
+                            >
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>STEM Instructor and Curriculum Developer</b>
+                                </Typography>
+                                <Typography variant="p2" >
+                                    <i>
+                                        Built By Me LLC <br />
+                                        July 2020 - Present
+                                    </i> <br /> <br />
+                                </Typography>
+                                <Typography variant="p1">
+                                    Taught and developed curriculum for classes including Pygames and Scratch
                             </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -152,21 +186,25 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Built By Me LLC Instructor</b>
+                                    <b>Project Lead and Software Architect</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>July 2020 - Present </i> <br /> <br />
+                                    <i>
+                                        HackRU Research and Development Team Volunteer<br />
+                                        June 2020 - Present
+                                    </i> <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    Taught and developed curriculum for classes including Pygames and Scratch
-                            </Typography>
+                                    Lead frontend and backend development teams for MentorQ, a web application which connects hackathon attendees with mentors at
+                                    Rutgers’ biannual HackRU events
+                                </Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
                     <Typography variant="h2" className={classes.heading}>
-                        <br />Certification<br />
+                        <br />Certificates<br />
                     </Typography>
                     <Timeline >
                         <TimelineItem align="left">
