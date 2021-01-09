@@ -136,10 +136,7 @@ function Experience() {
                 >
                     <Grid item xs={12}>
                         <Typography variant="h2" className={classes.title}>
-                            <br />Projects
-                        </Typography>
-                        <Typography variant="p2" className={classes.text}>
-                            Click project to learn more<br /> <br />
+                            <br />Projects<br /><br />
                         </Typography>
                     </Grid>
                     <Grid container
@@ -167,10 +164,16 @@ function Experience() {
                                 <CardMedia component="img" image={mentorq_demo} className={classes.dialogimage} />
                                 <Typography gutterBottom align="left">
                                     <br />
-                                MentorQ is a web based system to connect hackers to mentors at Rutgers University's virtual hackathon in Fall 2020.
-                                As a frontend developer on the MentorqQ team, I have worked with API integration, the administration view, user feedback system, website design, and more.
-                                The MentorQ frontend was built using a React framework and styled with Material-UI.
-                            </Typography>
+                                I am currently the project lead for one of HackRU's research and development teams, MentorQ. MentorQ is a real-time ticket queue system aimed at connecting hackathon attendees to mentors.
+                                As a software architect as well, I have worked with REST API design and integration, the administration portal, user feedback system, user interface redesign, and more.
+                                <br /><br />
+                                    <Link href="https://github.com/HackRU/mentorq" >
+                                        <u>Frontend Github repository</u>
+                                    </Link><br />
+                                    <Link href="https://github.com/HackRU/mentorq-backend" >
+                                        <u>Backend Github repository</u>
+                                    </Link>
+                                </Typography>
                             </DialogContent>
                         </Dialog>
 
@@ -199,8 +202,8 @@ function Experience() {
                                 The website was created using a React framework, styled using Material-UI, and hosted using Heroku.
                             </Typography>
                                 <Link href="https://mtpshacks.herokuapp.com/" >
-                                    View live site here
-                            </Link>
+                                    <u>View live site here</u>
+                                </Link>
                             </DialogContent>
                         </Dialog>
 
