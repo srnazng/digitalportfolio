@@ -148,18 +148,16 @@ function Experience() {
                             <Card className={classes.card} onClick={handleClickOpen0}>
                                 <Typography variant="h5" className={classes.text} >
                                     MentorQ
-                            </Typography>
-
+                                </Typography>
                                 <CardMedia component="img" image={white_hackru} className={classes.image} />
                                 <Chip label="ReactJS" color="primary" /> <Chip label="REST APIs" /><Chip label="Material-UI" color="secondary" /><Chip label="Redux" color="primary" /> <Chip label="Django" />
-
                             </Card>
                         </Grid>
 
                         <Dialog onClose={handleClose0} aria-labelledby="customized-dialog-title" open={open0}>
                             <DialogTitle onClose={handleClose0} className={classes.dialogTitle}>
                                 MentorQ
-                        </DialogTitle>
+                            </DialogTitle>
                             <DialogContent dividers align="center">
                                 <CardMedia component="img" image={mentorq_demo} className={classes.dialogimage} />
                                 <Typography gutterBottom align="left">
@@ -214,8 +212,7 @@ function Experience() {
                                 <Typography variant="h5" className={classes.text}>
                                     MyBus
                                 </Typography>
-
-                                <CardMedia component="img" image={mybus} className={classes.image} />
+                                <CardMedia component="img" image={mybus} className={classes.image} /><br />
                                 <Chip label="HTML" color="primary" /> <Chip label="CSS" color="secondary" /> <Chip label="JavaScript" /> <Chip label="Firebase" /> <Chip label="Bootstrap" color="secondary" />
                             </Card>
                         </Grid>
