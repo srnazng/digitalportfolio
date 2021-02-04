@@ -13,6 +13,10 @@ const words = [
         value: 94,
     },
     {
+        text: 'C',
+        value: 94,
+    },
+    {
         text: 'JavaScript',
         value: 85,
     },
@@ -75,7 +79,7 @@ const callbacks = {
 }
 
 const options = {
-    colors: ["#75c9d3", "#51e3f0", "rgb(212, 196, 255)", "rgb(211, 107, 255)", "skyblue", "#af6acc", "black", "lightblue", "navy"],
+    colors: ["#75c9d3", "#51e3f0", "rgb(212, 196, 255)", "rgb(211, 107, 255)", "skyblue", "#af6acc", "black", "navy", "darkblue", "indigo"],
     fontSizes: [40, 90],
     fontStyle: "normal",
     fontWeight: "normal",
