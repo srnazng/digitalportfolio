@@ -86,7 +86,7 @@ function Experience() {
                                     </i>
                                 </Typography>
                                 <Typography variant="p1">
-                                    Past/Current Coursework: Data Structures, Computer Architecture, Intro to Discrete Structures
+                                    Past/Current Coursework: Data Structures, Computer Architecture, Intro to Discrete Structures, Intro to Linear Algebra
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -106,13 +106,36 @@ function Experience() {
                                 </Typography>
                                 <Typography variant="p2" >
                                     <i>
-                                        2019-2020 <br />
                                         4.0 GPA
                                     </i>  <br /><br />
                                 </Typography>
                                 <Typography variant="p1">
                                     Coursework: Discrete Mathematics, Linear Algebra
                             </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent
+                                className={classes.oppositeContent}
+                                color="textSecondary"
+                            >
+                            </TimelineOppositeContent>
+                            <TimelineSeparator >
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent >
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>Middlesex County Academy for Science Mathematics and Engineering Technologies</b>
+                                </Typography>
+                                <Typography variant="p2" >
+                                    <i>
+                                        Class of 2020 <br /><br />
+                                    </i>
+                                </Typography>
+                                <Typography variant="p1">
+                                    Electrical and Computer Engineering Track
+                                </Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
@@ -134,7 +157,32 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Web Development and Programs Intern</b>
+                                    <b>Device Technology Intern</b>
+                                </Typography>
+                                <Typography variant="p2" >
+                                    <i>
+                                        Verizon<br />
+                                        June 2021 - August 2021
+                                    </i> <br /> <br />
+                                </Typography>
+                                <Typography variant="p1">
+                                    Summer internship on Verizon's Global Network and Technology Team <br />
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem align="left">
+                            <TimelineOppositeContent
+                                className={classes.oppositeContent}
+                                color="textSecondary"
+                            >
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent >
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>Intern</b>
                                 </Typography>
                                 <Typography variant="p2" >
                                     <i>
@@ -225,7 +273,7 @@ function Experience() {
                                     <i>August 2020</i> <br /><br />
                                     Stanford University through Coursera <br />
                                     Certificate ID: SU3UTZTM7VR4<br />
-                                    <Link href="https://www.coursera.org/account/accomplishments/certificate/SU3UTZTM7VR4">View Certificate</Link>
+                                    <Link href="https://www.coursera.org/account/accomplishments/certificate/SU3UTZTM7VR4"><u>View Certificate</u></Link>
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -247,7 +295,7 @@ function Experience() {
                                     <i>January 2020</i> <br /><br />
                                     HarvardX - An Online Learning Initiative by Harvard University through edX <br />
                                     Certificate ID: 2e53a7758765434ab2fba56326160f79<br />
-                                    <Link href="https://cs50.harvard.edu/certificates/7236c07e-8af7-455c-b343-df0170e7e597">View Certificate</Link>
+                                    <Link href="https://cs50.harvard.edu/certificates/7236c07e-8af7-455c-b343-df0170e7e597"><u>View Certificate</u></Link>
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -269,7 +317,7 @@ function Experience() {
                                     <i>August 2017</i> <br /><br />
                                     Duke University through CourseraX <br />
                                     Certificate ID: EETAEHGZYMJN9<br />
-                                    <Link href="https://www.coursera.org/account/accomplishments/verify/EETAEHGZYMJN">View Certificate</Link>
+                                    <Link href="https://www.coursera.org/account/accomplishments/verify/EETAEHGZYMJN"><u>View Certificate</u></Link>
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
