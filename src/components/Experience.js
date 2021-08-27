@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
-import { createMuiTheme, Card, Paper, Grid, Link } from "@material-ui/core";
+import { createMuiTheme, Paper, Grid } from "@material-ui/core";
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -55,92 +55,12 @@ function Experience() {
     return (
         <Paper className={classes.root}>
             <Grid container
-                spacing={1}
+                spacing={0}
                 style={{ minHeight: '300px' }}
                 margin="10px"
             >
-                <Grid xs={12} sm={12} md={6} lg={4} xl={4}>
-                    <Typography variant="h2" className={classes.heading} >
-                        <br />Education<br />
-                    </Typography>
-                    <Timeline align="left" className={classes.timeline}>
-                        <TimelineItem>
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator >
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent >
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>Rutgers University Honors Program</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>
-                                        Class of 2024 <br />
-                                        4.0 GPA <br />
-                                        Computer Science Major, Business Administration Minor <br /><br />
-                                    </i>
-                                </Typography>
-                                <Typography variant="p1">
-                                    Past/Current Coursework: Data Structures, Computer Architecture, Intro to Discrete Structures, Intro to Linear Algebra
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem >
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent>
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>Middlesex County College High School Scholar</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>
-                                        4.0 GPA
-                                    </i>  <br /><br />
-                                </Typography>
-                                <Typography variant="p1">
-                                    Coursework: Discrete Mathematics, Linear Algebra
-                            </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem>
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator >
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent >
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>Middlesex County Academy for Science Mathematics and Engineering Technologies</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>
-                                        Class of 2020 <br /><br />
-                                    </i>
-                                </Typography>
-                                <Typography variant="p1">
-                                    Electrical and Computer Engineering Track
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                    </Timeline>
-                </Grid>
-                <Grid item xs={12} sm={12} md={6} lg={4} xl={4} >
+                <Grid xs={0} sm={0} md={1} lg={2} xl={2}></Grid>
+                <Grid xs={12} sm={12} md={10} lg={8} xl={8}>
                     <Typography variant="h2" className={classes.heading}>
                         <br />Experience<br />
                     </Typography>
@@ -157,16 +77,27 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Device Technology Intern</b>
+                                    <b>Verizon</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>
-                                        Verizon<br />
-                                        June 2021 - August 2021
-                                    </i> <br /> <br />
+                                    Device Technology Intern<br />
+                                    <i>June 2021 - August 2021</i>
+                                    <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    Summer internship on Verizon's Global Network and Technology Team <br />
+                                    Verizon Modeling and Analytics Systems Team <br />
+                                    <ul>
+                                        <li>Developed real-time analytics web portal with data visualizations and proactive alarming</li>
+                                        <li>Developed an automated email notification system for performance degradation alarms</li>
+                                        <li>Technologies: Reactjs, JavaScript, Restful API integration, Node.js, cron, Postgres</li>
+                                    </ul>
+                                    <br />
+                                    Verizon Identity Management Team<br />
+                                    <ul>
+                                        <li>Performed research on different trends in identity and authentication technology (digital identity, biometrics, self-sovereign identity, decentralization, etc.) and how upcoming technology can be leveraged by the company</li>
+                                        <li>Developed test plan for vendors offering behavioral biometric technology</li>
+                                        <li>Helped create demo videos for the team's proof of concepts that were presented to leadership and partner companies</li>
+                                    </ul>
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -182,44 +113,33 @@ function Experience() {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h5" className={classes.subheading}>
-                                    <b>Intern</b>
+                                    <b>Junior Achievement of NJ</b>
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>
-                                        Junior Achievement of New Jersey<br />
-                                        July 2020 - Present
-                                    </i> <br /> <br />
+                                    Software Development Intern<br />
+                                    <i>August 2021 - Present</i> <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    - Develop and maintain websites for various programs <br />
-                                    - Organize statewide STEM programs for students <br />
-                                    - Marketing <br />
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem align="left">
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent>
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>STEM Instructor and Curriculum Developer</b>
+                                    <ul>
+                                        <li>Develop proof of concept application for students to track hours spent volunteering at JANJ. Includes developing a web app and admin portal.</li>
+                                        <li>Manage team of volunteers developing the mobile app portion of the project. </li>
+                                        <li>Technologies used: Reactjs, Django REST Framework, JavaScript, Python, REST APIs, Heroku</li>
+                                    </ul>
+                                    <br />
                                 </Typography>
                                 <Typography variant="p2" >
-                                    <i>
-                                        Built By Me LLC <br />
-                                        July 2020 - Present
-                                    </i> <br /> <br />
+                                    Programs Intern<br />
+                                    <i>July 2020 - August 2021</i>
+                                    <br /> <br />
                                 </Typography>
                                 <Typography variant="p1">
-                                    Taught and developed curriculum for classes including Pygames and Scratch
-                            </Typography>
+                                    <ul>
+                                        <li>Managed STEM programs for hundreds of students across NJ including the <a href="https://www.crackthecodeja.com/">Crack the Code Workshop Series</a>, <a href="https://www.adptechchallenge.com/">ADP Tech Challenge</a>, EY Tech Talks, and JANJ App Challenge.</li>
+                                        <li>Reached 550+ students and worked with 80+ corporate volunteers and 80+ high school volunteers overall. </li>
+                                        <li>Developed workshop curriculum (Python, HTML/CSS, JavaScript, etc.), program marketing, communicated with corporate partners.</li>
+                                        <li>Website development/maintenance (Reactjs, Wix, dotCMS).</li>
+                                    </ul>
+                                </Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem align="left">
@@ -248,82 +168,35 @@ function Experience() {
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
+                        <TimelineItem align="left">
+                            <TimelineOppositeContent
+                                className={classes.oppositeContent}
+                                color="textSecondary"
+                            >
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="h5" className={classes.subheading}>
+                                    <b>STEM Instructor and Curriculum Developer</b>
+                                </Typography>
+                                <Typography variant="p2" >
+                                    <i>
+                                        Built By Me LLC <br />
+                                        July 2020 - June 2021
+                                    </i> <br /> <br />
+                                </Typography>
+                                <Typography variant="p1">
+                                    Taught and developed curriculum for classes including Python, Pygames and Scratch
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
                     </Timeline>
+                    <br /><br />
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
-                    <Typography variant="h2" className={classes.heading}>
-                        <br />Certificates<br />
-                    </Typography>
-                    <Timeline >
-                        <TimelineItem align="left">
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent >
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>Machine Learning</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>August 2020</i> <br /><br />
-                                    Stanford University through Coursera <br />
-                                    Certificate ID: SU3UTZTM7VR4<br />
-                                    <Link href="https://www.coursera.org/account/accomplishments/certificate/SU3UTZTM7VR4"><u>View Certificate</u></Link>
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem align="left">
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent >
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>CS50: Introduction to Computer Science</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>January 2020</i> <br /><br />
-                                    HarvardX - An Online Learning Initiative by Harvard University through edX <br />
-                                    Certificate ID: 2e53a7758765434ab2fba56326160f79<br />
-                                    <Link href="https://cs50.harvard.edu/certificates/7236c07e-8af7-455c-b343-df0170e7e597"><u>View Certificate</u></Link>
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-                        <TimelineItem align="left">
-                            <TimelineOppositeContent
-                                className={classes.oppositeContent}
-                                color="textSecondary"
-                            >
-                            </TimelineOppositeContent>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent >
-                                <Typography variant="h5" className={classes.subheading}>
-                                    <b>Programming Foundations with JavaScript, HTML and CSS</b>
-                                </Typography>
-                                <Typography variant="p2" >
-                                    <i>August 2017</i> <br /><br />
-                                    Duke University through CourseraX <br />
-                                    Certificate ID: EETAEHGZYMJN9<br />
-                                    <Link href="https://www.coursera.org/account/accomplishments/verify/EETAEHGZYMJN"><u>View Certificate</u></Link>
-                                </Typography>
-                            </TimelineContent>
-                        </TimelineItem>
-
-                    </Timeline>
-                </Grid>
+                <Grid xs={0} sm={0} md={1} lg={2} xl={2}></Grid>
             </Grid>
         </Paper >
     );
