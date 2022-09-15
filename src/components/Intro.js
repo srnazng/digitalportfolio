@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Typography, Grid, Card, CardMedia, createMuiTheme, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import prof from "../media/prof.png";
-import Resume from "../media/SerenaZeng_Resume.pdf";
+import Resume from "../media/Serena_Zeng_Resume.pdf";
 
 const theme = createMuiTheme({
     breakpoints: {
@@ -106,7 +106,7 @@ function Intro() {
                     </Typography>
                 </Grid>
                 <Grid item xs="7">
-                    <Button variant="contained" className={classes.button} href={Resume}>Resume</Button>
+                    <Button variant="contained" className={classes.button} href={"https://drive.google.com/file/d/1-Aa6EW8okKdBYIvaTvQh6wf6Xsd5sYuo/view?usp=sharing"}>Resume</Button>
                 </Grid>
             </Grid>
 

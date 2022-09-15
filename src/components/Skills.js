@@ -6,11 +6,31 @@ import { makeStyles } from "@material-ui/core/styles";
 const words = [
     {
         text: 'ReactJS',
-        value: 93,
+        value: 95,
+    },
+    {
+        text: 'React Native',
+        value: 87,
     },
     {
         text: 'Java',
+        value: 93,
+    },
+    {
+        text: 'Android Studio',
         value: 94,
+    },
+    {
+        text: 'SQL',
+        value: 90,
+    },
+    {
+        text: 'HTML',
+        value: 53,
+    },
+    {
+        text: 'CSS',
+        value: 57,
     },
     {
         text: 'C',
@@ -21,56 +41,28 @@ const words = [
         value: 85,
     },
     {
-        text: 'Django',
-        value: 80,
-    },
-    {
         text: 'REST APIs',
         value: 90,
     },
     {
         text: 'Git/Github',
-        value: 80,
-    },
-    {
-        text: 'CSS',
-        value: 95,
-    },
-    {
-        text: 'Postman',
-        value: 85,
-    },
-    {
-        text: 'Material-UI',
-        value: 85,
-    },
-    {
-        text: 'Firebase',
-        value: 85,
+        value: 60,
     },
     {
         text: 'Python',
         value: 70,
     },
     {
-        text: 'Bootstrap',
-        value: 80,
+        text: 'Django',
+        value: 76,
     },
     {
-        text: 'Octave',
-        value: 70,
+        text: 'Firebase',
+        value: 50,
     },
     {
-        text: 'HTML',
-        value: 70,
-    },
-    {
-        text: 'Canva',
-        value: 70,
-    },
-    {
-        text: 'Heroku',
-        value: 70,
+        text: 'Postman',
+        value: 40,
     },
 ]
 
@@ -80,7 +72,7 @@ const callbacks = {
 
 const options = {
     colors: ["#75c9d3", "#51e3f0", "rgb(212, 196, 255)", "rgb(211, 107, 255)", "skyblue", "#af6acc", "black", "navy", "darkblue", "indigo"],
-    fontSizes: [40, 90],
+    fontSizes: [20, 70],
     fontStyle: "normal",
     fontWeight: "normal",
     padding: 1,
@@ -94,7 +86,7 @@ const useStyles = makeStyles({
     heading: {
         textAlign: "center",
         color: "#070033",
-        padding: "20px",
+        padding: "0px",
     },
 });
 
