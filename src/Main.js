@@ -47,10 +47,12 @@ const useStyles = makeStyles({
     backgroundColor: "white",
     height: "800px",
     paddingBottom: "100px",
+    paddingLeft: "50px",
+    paddingRight: "50px",
   },
   skills: {
     backgroundColor: "#f2f2f2",
-    height: "400px",
+    height: "800px",
     width: "100vw",
     paddingTop: "30px",
     paddingBottom: "30px",
@@ -77,7 +79,6 @@ function Main() {
         <Grid item xs={12} className={classes.projects}>
           <Projects />
         </Grid>
-
       </Grid>
       <Socials />
     </div >

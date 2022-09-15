@@ -6,6 +6,7 @@ import mtpshacks_demo from '../media/mtpshacks_demo.png';
 import mentorq_demo from '../media/mentorq_demo.png';
 import white_hackru from '../media/white_hackru.png';
 import prof from '../media/prof.png';
+import roomies from '../media/roomies.png';
 import mybus from '../media/mybus.png';
 import mtpshacks from '../media/mtpshacks.png';
 import { withStyles } from '@material-ui/core/styles';
@@ -100,6 +101,7 @@ function Experience() {
     const [open0, setOpen0] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
 
     const handleClickOpen0 = () => {
         setOpen0(true);
@@ -123,6 +125,14 @@ function Experience() {
 
     const handleClose2 = () => {
         setOpen2(false);
+    };
+
+    const handleClickOpen3 = () => {
+        setOpen3(true);
+    };
+
+    const handleClose3 = () => {
+        setOpen3(false);
     };
 
     return (
@@ -162,9 +172,9 @@ function Experience() {
                                 <CardMedia component="img" image={mentorq_demo} className={classes.dialogimage} />
                                 <Typography gutterBottom align="left">
                                     <br />
-                                I am currently the project lead for one of HackRU's research and development teams, MentorQ. MentorQ is a real-time ticket queue system aimed at connecting hackathon attendees to mentors.
-                                As a software architect as well, I have worked with REST API design and integration, the administration portal, user feedback system, user interface redesign, and more.
-                                <br /><br />
+                                    I am currently the project lead for one of HackRU's research and development teams, MentorQ. MentorQ is a real-time ticket queue system aimed at connecting hackathon attendees to mentors.
+                                    As a software architect as well, I have worked with REST API design and integration, the administration portal, user feedback system, user interface redesign, and more.
+                                    <br /><br />
                                     <Link href="https://github.com/HackRU/mentorq" >
                                         <u>Frontend Github repository</u>
                                     </Link><br />
@@ -175,6 +185,35 @@ function Experience() {
                             </DialogContent>
                         </Dialog>
 
+                        <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
+                            <Card className={classes.card} onClick={handleClickOpen3}>
+                                <Typography variant="h5" className={classes.text} >
+                                    Roomies
+                                </Typography>
+                                <CardMedia component="img" image={roomies} className={classes.image} />
+                                <Chip label="Android Studio" color="primary" /> <Chip label="REST APIs" /><Chip label="Firebase" color="secondary" /><Chip label="Parse" color="primary" /> <Chip label="Java" />
+                            </Card>
+                        </Grid>
+
+                        <Dialog onClose={handleClose3} aria-labelledby="customized-dialog-title" open={open3}>
+                            <DialogTitle onClose={handleClose3} className={classes.dialogTitle}>
+                                Roomies
+                            </DialogTitle>
+                            <DialogContent dividers align="center">
+                                <ReactPlayer url='https://youtu.be/hmgVgvBWCRk' playing width="auto" />
+                                <Typography gutterBottom align="left">
+                                    <br />
+                                    Roomies is an Android app to help roommates, housemates, or families plan their everyday tasks. Add and assign chores to a shared chore calendar, record and assign house expenses, create a shared shopping list, and more!
+                                    <br /><br />
+                                    <Link href="https://github.com/srnazng/roomies" >
+                                        <u>Github repository</u>
+                                    </Link><br />
+                                    <Link href="https://play.google.com/store/apps/details?id=com.serena.roomies" >
+                                        <u>Google Play Store</u>
+                                    </Link>
+                                </Typography>
+                            </DialogContent>
+                        </Dialog>
 
                         <Grid item xs={10} sm={7} md={3} lg={2} xl={2}>
                             <Card className={classes.card} onClick={handleClickOpen1}>
@@ -190,15 +229,15 @@ function Experience() {
                         <Dialog onClose={handleClose1} aria-labelledby="customized-dialog-title" open={open1}>
                             <DialogTitle onClose={handleClose1} className={classes.dialogTitle}>
                                 MTPSHacks Submission Site
-                        </DialogTitle>
+                            </DialogTitle>
                             <DialogContent dividers align="center">
                                 <CardMedia component="img" image={mtpshacks_demo} className={classes.dialogimage} />
                                 <Typography gutterBottom align="left">
                                     <br />
-                                The MTPSHacks website platform displayed project submissions for Marlboro Township public school district's middle school hackathon.
-                                The 50+ student submissions originally through a Google form could be viewed by students, parents, as well as sponsors of the hackathon.
-                                The website was created using a React framework, styled using Material-UI, and hosted using Heroku.
-                            </Typography>
+                                    The MTPSHacks website platform displayed project submissions for Marlboro Township public school district's middle school hackathon.
+                                    The 50+ student submissions originally through a Google form could be viewed by students, parents, as well as sponsors of the hackathon.
+                                    The website was created using a React framework, styled using Material-UI, and hosted using Heroku.
+                                </Typography>
                                 <Link href="https://mtpshacks.herokuapp.com/" >
                                     <u>View live site here</u>
                                 </Link>
@@ -225,12 +264,12 @@ function Experience() {
                                 <ReactPlayer url='https://youtu.be/fD_90OBuaqU' playing width="auto" />
                                 <Typography gutterBottom align="left">
                                     <br />
-                                MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
-                                My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
-                                The site was styled using Bootstrap and hosted using Firebase hosting. All authorization and user information was stored through a Firestore database.
-                                <br /><br />
-                                MyBus won the 2019 Congressional App Challenge. Our submission video can be seen <Link href="https://youtu.be/Vz4HAo7gtr4"> <u>here</u></Link>.
-                                <br /><br />
+                                    MyBus is a product to improve communication through the school bus system consisting of a trackerBox, mobile application and administration website
+                                    My role in this project was making the trackerBox using an Arduino Uno and GPS/LTE shield. I also created the administration site using HTML, CSS and JavaScript.
+                                    The site was styled using Bootstrap and hosted using Firebase hosting. All authorization and user information was stored through a Firestore database.
+                                    <br /><br />
+                                    MyBus won the 2019 Congressional App Challenge. Our submission video can be seen <Link href="https://youtu.be/Vz4HAo7gtr4"> <u>here</u></Link>.
+                                    <br /><br />
                                 </Typography>
 
                                 <Typography variant="h6">
